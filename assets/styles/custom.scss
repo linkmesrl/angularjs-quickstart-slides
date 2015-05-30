@@ -21,6 +21,15 @@ code{
     display: inline-block;
 }
 
+img.center{
+    margin: 0 auto;
+    display: block;
+}
+
+img.round{
+    border-radius: 10px;
+}
+
 :not(pre) > code[class*="language-"]{
     white-space: pre-line !important;
     padding: 1em !important;
