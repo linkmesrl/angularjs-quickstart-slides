@@ -10,6 +10,7 @@ Slides for the workshop @ Login
 
 **TODO**
 - Add LinkMe Logo in Slide 2
+- Add repo lesson 1 address in Slide 23
 
 _Powered By_
 
