@@ -5,8 +5,7 @@ applause.controller('DeckCtrl', function($scope, Appdata, $localStorage, $locati
 
   $scope.isProgressBarVisible = Appdata.progressBar;
   $scope.isSlideCountVisible = Appdata.slideCount;
-
-  $scope.$storage = $localStorage.$default({currentSlide: 1});
+  $scope.$storage = $localStorage.$default({currentSlide: $location.path()});
 
   $scope.$watch(function() {
     return Appdata;

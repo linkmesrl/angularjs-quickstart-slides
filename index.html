@@ -62,8 +62,8 @@
           <div step="8">
             <h4>Integrazione di componenti</h4>
           </div>
-          <div step="9">
-            <h2>Let's Start!</h2>
+          <div step="9" style="margin-top: 70px">
+            <h1>Let's Start!</h1>
           </div>
         </slide>
 
@@ -118,13 +118,56 @@
           </div>
         </slide>
 
-        <slide steps="2">
+        <slide>
+          <h2>Come creare un applicazione Angular</h2>
+          <div>
+            <h3 class="abs-center">Create a file named: <code class="inline">index.html</code></h3>
+          </div>
+        </slide>
+
+        <slide>
+          <h3>Creare un file Html</h3>
+          <code prism class="language-markup">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;title>AngularJs QuickStart&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              
+            &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </slide>
+
+        <slide steps="1">
+          <h3>Caricare Angular e inizializzare l'applicazione</h3>
+          <code prism class="language-markup">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en" <strong>ng-app</strong>&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;title>AngularJs QuickStart&lt;/title&gt;
+              <strong>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"&gt;&lt;/script&gt;</strong>
+            &lt;/head&gt;
+            &lt;body&gt;
+              
+            &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+          <div step="1">
+            <h2>Fatto!</h2>
+          </div>
+        </slide>
+
+        <slide steps="1">
           <h2>Data Binding</h2>
-          <div step="1" class="text-center" style="margin-top: 100px">
+          <div class="text-center" style="margin-top: 100px">
             <input type="text" ng-model="name" placeholder="Insert your name!"/>
             <h3>Hi {{name}}!</h3>
           </div>
-          <div step="2" style="margin-top: 100px">
+          <div step="1" style="margin-top: 100px">
               <div class="ng-non-bindable">
             <code prism class="language-markup">
                 &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
@@ -149,39 +192,81 @@
         <note>Il valore nel template viene automaticamente sincronizzato con quello definito nel javascript</note>
       </slide>
 
-        <slide bg-img="oscar.jpg" credits="TIME & LIFE Pictures http://life.time.com/?attachment_id=11373">
-          <h2 class="left">Auto fitting images</h2>
-          <p class="light-text">Add the "bg-img" attribute to your slide element:<br><code class="inline">&lt;slide <strong>bg-img</strong>="path/to/image"&gt;</code><br>without worrying about the image size.</p>
-          <p class="light-text">You can add credits too (with autolink)<br><code class="inline">&lt;slide bg.img="..." <strong>credits</strong>="..."&gt;</code></p>
-        </slide>
+      <slide steps="1">
+        <h2>Feature del Data-Binding</h2>
+        <h3>Binding Multipli</h3>
+        <div class="text-center" style="margin-top: 10px">
+          <input type="text" ng-model="name" placeholder="Insert your name!"/>
+          <h3>Hi {{name}}!</h3>
+          <h3>How are you {{name}}?</h3>
+        </div>
+        <div step="1" style="margin-top: 50px">
+            <div class="ng-non-bindable">
+          <code prism class="language-markup">
+              &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
+              &lt;div&gt;Hi {{ name }}!&lt;/div&gt;
+              &lt;div&gt;How are you {{ name }}?&lt;/div&gt;
+          </code>
+            </div>
 
-        <slide>
-          <h3 class="abs-center">Add<br>class="abs-center"<br>to an item to center it</h3>
-        </slide>
+        </div>
+      </slide>
 
-        <slide steps="3">
-          <h2>Steps</h2>
-          <h3>You can have a slide with multiple steps</h3>
-          <div step="1">Split your slide with a simple attribute</div>
-          <br><br>
-          <div step="2">Just add:</div>
-          <div step="3">
-            <pre prims class="language-markup">
-              &lt;slide <strong>steps="2"</strong>&gt;
-                &lt;div step="1"&gt;First Step&lt;/div&gt;
-                &lt;div step="2"&gt;Second Step&lt;/div&gt;
-              &lt;/slide&gt;
-            </pre>
+      <slide steps="1">
+        <h2>Feature del Data-Binding</h2>
+        <h3>Binding di espressioni</h3>
+        <div class="text-center" style="margin-top: 10px">
+          <input type="number" ng-model="a"/>
+          <h4>+</h4>
+          <input type="number" ng-model="b"/>
+          <h3>Result is {{a+b}}!</h3>
+        </div>
+        <div step="1" style="margin-top: 50px">
+          <div class="ng-non-bindable">
+            <code prism class="language-markup">
+              &lt;input type="number" ng-model="a"/&gt;
+              &lt;h4&gt;+&lt;/h4&gt;
+              &lt;input type="number" ng-model="b"/&gt;
+              &lt;h3&gt;Result is {{a+b}}!&lt;/h3&gt;    
+            </code>
           </div>
-        </slide>
+        </div>
+      </slide>
 
-        <slide>
-          <h1>Do you like that?</h1>
-          <img class="center media" src="assets/theme/images/slow-clap.gif" alt=""/>
-          <p class="center">Follow me on twitter <a href="https://twitter.com/granze">@granze</a></p>
-        </slide>
+      <slide steps="1">
+        <h2>Feature del Data-Binding</h2>
+        <h3>Assegnazione di valori</h3>
+        <div class="text-center" style="margin-top: 10px">
+          <button ng-click="value = 3" ng-init="value = 1">Set Value to 3</button>
+          <h3>Value is: {{value}}</h3>
+        </div>
+        <div step="1">
+          <div class="ng-non-bindable">
+            <code prism class="language-markup">
+              &lt;button ng-click="value = 3" ng-init="value = 1"&gt;Set Value to 3&lt;/button&gt;
+              &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
+            </code>
+          </div>
+        </div>
+      </slide>
 
-        <!-- =========== /SLIDE =========== -->
+      <slide steps="1">
+        <h2>Feature del Data-Binding</h2>
+        <h3>Assegnazione di espressioni</h3>
+        <div class="text-center" style="margin-top: 10px">
+          <button ng-click="value = value + 1" ng-init="value = 1">Increase Value</button>
+          <h3>Value is: {{value}}</h3>
+        </div>
+        <div step="1">
+          <div class="ng-non-bindable">
+            <code prism class="language-markup">
+              &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
+              &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
+            </code>
+          </div>
+        </div>
+      </slide>
+      <!-- =========== /SLIDE =========== -->
 
       </div>
 

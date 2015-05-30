@@ -21,6 +21,11 @@ code{
     display: block;
 }
 
+:not(pre) > code[class*="language-"]{
+    white-space: normal !important;
+    padding: 1em !important;
+}
+
 .col{
     float: left;
 
