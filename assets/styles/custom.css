@@ -17,3 +17,10 @@ input {
 
 code {
   display: block; }
+
+.col {
+  float: left; }
+  .col.half {
+    width: 45%; }
+  .col.half + .col.half {
+    margin-left: 10%; }

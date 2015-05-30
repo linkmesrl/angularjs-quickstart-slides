@@ -20,3 +20,15 @@ input{
 code{
     display: block;
 }
+
+.col{
+    float: left;
+
+    &.half{
+        width: 45%;
+    }
+
+    &.half + &.half{
+        margin-left: 10%;
+    }
+}
