@@ -266,11 +266,168 @@
           </div>
         </div>
       </slide>
+
+      <slide steps="1">
+        <h2>Feature del Data-Binding</h2>
+        <h3>Valutazione di espressioni</h3>
+        <div class="text-center" style="margin-top: 10px">
+          <button ng-click="value = value + 1" ng-init="value = 1">Increase Value</button>
+          <h4 style="margin-top: 10px">Value is: {{value}}</h4>
+          <h3 ng-hide="value > 3">I will be <i>hidden</i> if value is greater than 3</h3>
+          <h3 ng-show="value > 3">I will be <i>visible</i> if value is greater than 3</h3>
+        </div>
+        <div step="1">
+          <div class="ng-non-bindable">
+            <code prism class="language-markup">
+              &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
+              &lt;h4&gt;Value is: {{value}}&lt;/h4&gt;
+              &lt;h3 ng-hide="value > 3"&gt;I will be hidden if value is greater than 3&lt;/h3&gt;
+              &lt;h3 ng-show="value &gt; 3"&gt;I will be visible if value is greater than 3&lt;/h3&gt;    
+            </code>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="1">
+      <h2>Data-Binding on steroids</h2>
+      <h3>Esecuzione di funzioni Javascript</h3>
+        <div class="text-center" style="margin-top: 100px">
+          <label>Partecipant name:</label>
+          <input type="text" ng-model="name"/>
+          <button ng-click="array.push(name)" ng-init="array = []">Insert Name</button>
+          <h3 style="margin-top: 10px">Value is: {{array}}</h3>
+        </div>
+        <div step="1">
+          <div class="ng-non-bindable">
+            <code prism class="language-markup">
+              &lt;input type="text" ng-model="name"/&gt;
+              &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
+              &lt;h3 style="margin-top: 10px"&gt;Value is: {{array}}&lt;/h3&gt;   
+            </code>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="1">
+        <h2>Data-Binding on steroids</h2>
+        <h3>Repeater</h3>
+        <div class="text-center" style="margin-top: 10px">
+          <label>Partecipant name:</label>
+          <input type="text" ng-model="name"/>
+          <button ng-click="array.push(name)" ng-init="array = []">Insert Name</button>
+          <h2 ng-repeat="name in array">{{name}}</h2>
+        </div>
+        <div step="1">
+          <div class="ng-non-bindable">
+            <code prism class="language-markup">
+              &lt;input type="text" ng-model="name"/&gt;
+              &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
+              &lt;h2 ng-repeat="name in array"&gt;{{name}}&lt;/h2&gt;
+            </code>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="1">
+        <h2>Data-Binding on steroids</h2>
+        <h3>Filtering</h3>
+        <div class="text-center" style="margin-top: 10px">
+          <label>Partecipant name:</label>
+          <input type="text" ng-model="name"/>
+          <button ng-click="array.push(name)" ng-init="array = ['Matteo', 'Giovanni', 'Maurizio', 'Gianfranco', 'Sara', 'Leonida', 'Juri']">Insert Name</button>
+          <div style="padding-top: 20px">
+            <input type="text" ng-model="query">
+            <div style="float:left; margin-right: 20px;" ng-repeat="name in array | filter:query">{{name}}</div>
+          </div>
+        </div>
+        <div step="1" style="margin-top: 60px">
+          <div class="ng-non-bindable">
+            <code prism class="language-markup">
+              &lt;input type="text" ng-model="name"/&gt;
+              &lt;button ng-click="array.push(name)" ng-init="array = [...]"&gt;Insert Name&lt;/button&gt;
+              &lt;input type="text" ng-model="query"/&gt;
+              &lt;h2 ng-repeat="name in array | filter:query"&gt;{{name}}&lt;/h2&gt;
+            </code>
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Data-Binding on steroids</h2>
+        <h3>Advanced Filtering</h3>
+        <div class="text-center" style="margin-top: 10px">
+        <table>
+          <tr>
+            <td>
+              <label>Partecipant name:</label>
+              <input type="text" ng-model="participant.name"/>
+            </td>
+            <td>
+              <label>Partecipant Age:</label>
+              <input type="number" ng-model="participant.age">
+            </td>
+            <td>
+              <button ng-click="list.push(participant)" ng-init="list = [
+                {name: 'Matteo', age: '29'},
+                {name: 'Giovanni', age: '29'},
+                {name: 'Leonida', age: '35'},
+                {name: 'Gianfranco', age: '28'}]">Insert</button>
+            </td>
+          </tr>
+        </table>
+          <div style="padding-top: 20px">
+            <table>
+              <tr>
+                <th>
+                  Name <input type="text" ng-model="query.name">
+                </th>
+                <th>
+                  Age <input type="text" ng-model="query.age">
+                </th>
+              </tr>
+              <tr ng-repeat="person in list | filter:query">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Data-Binding on steroids</h2>
+        <div class="ng-non-bindable">
+          <code prism class="language-markup">
+            &lt;!-- Insert -->
+            &lt;!-- Participant = {name: 'Matteo', age: '29'} -->      
+            &lt;input type="text" ng-model="participant.name"/>
+            &lt;input type="number" ng-model="participant.age">
+            &lt;button ng-click="list.push(participant)" ng-init="list = []">Insert&lt;/button>
+
+            &lt;!-- Filter -->
+            Name &lt;input type="text" ng-model="query.name">
+            Age &lt;input type="text" ng-model="query.age">
+
+            &lt;!-- Repeat -->
+            &lt;div ng-repeat="person in list | filter:query">
+            &lt;span>{{person.name}}&lt;/span>
+            &lt;span>{{person.age}}&lt;/span>
+                
+          </code>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exrcise</h2>
+        <h3>Creare una pagina web in cui un utente possa inserire dei prodotti e filtrarli per nome</h3>
+        <p>I prodotti devono essere salvati in un array <code class="inline">products</code></p>
+        <p>Ognuno dei prodotti deve avere queste caratteristiche:</p>
+        <p><code class="inline">{category: String, name: String, available: Number}</code></p>
+        <h3>Qui è disponibile un template Html vuoto</h3>
+      </slide>
       <!-- =========== /SLIDE =========== -->
 
       </div>
-
-      <flip-clock></flip-clock>
 
       <div id="slide-count" ng-show="{{isSlideCountVisible}}">{{$storage.currentSlide}}/{{lastSlide}}</div>
 

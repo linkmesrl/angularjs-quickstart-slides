@@ -16,10 +16,10 @@ input {
   margin: 0 auto; }
 
 code {
-  display: block; }
+  display: inline-block; }
 
 :not(pre) > code[class*="language-"] {
-  white-space: normal !important;
+  white-space: pre-line !important;
   padding: 1em !important; }
 
 .col {
