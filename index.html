@@ -390,7 +390,7 @@
               <input type="number" ng-model="participant.age">
             </td>
             <td>
-              <button ng-click="list.push(participant)" ng-init="list = [
+              <button ng-click="list.push({name: participant.name, age: participant.age})" ng-init="list = [
                 {name: 'Matteo', age: '29'},
                 {name: 'Giovanni', age: '29'},
                 {name: 'Leonida', age: '35'},
@@ -425,7 +425,7 @@
             &lt;!-- Participant = {name: 'Matteo', age: '29'} -->      
             &lt;input type="text" ng-model="participant.name"/>
             &lt;input type="number" ng-model="participant.age">
-            &lt;button ng-click="list.push(participant)" ng-init="list = []">Insert&lt;/button>
+            &lt;button ng-click="list.push({name: participant.name, age: participant.age})" ng-init="list = []">Insert&lt;/button>
 
             &lt;!-- Filter -->
             Name &lt;input type="text" ng-model="query.name">
@@ -435,8 +435,8 @@
             &lt;div ng-repeat="person in list | filter:query">
             &lt;span>{{person.name}}&lt;/span>
             &lt;span>{{person.age}}&lt;/span>
-                
           </code>
+          <note>Objects and arrays are pushed by reference. Built-in types like numbers are pushed as a copy.</note>
         </div>
       </slide>
 
