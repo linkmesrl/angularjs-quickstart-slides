@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     buildFolder = 'presentation',
     assetsFolder = 'assets',
     srcPaths = {
-      scss: assetsFolder + '/styles/main.scss',
+      scss: assetsFolder + '/styles/*.scss',
       theme: assetsFolder + '/theme/*.scss',
       css: assetsFolder + '/styles/main.css',
       scripts: assetsFolder + '/scripts/{,*/}*.js',
@@ -122,5 +122,5 @@ gulp.task('serve', function() {
   gulp.start(['browserSync', 'styles', 'theme', 'scripts']);
   gulp.watch(srcPaths.scss, ['styles']);
   gulp.watch(srcPaths.theme, ['theme']);
-  gulp.watch(srcPaths.scripts, ['scripts', browserSync.reload]);
+  gulp.watch([srcPaths.scripts,'index.html'], ['scripts', browserSync.reload]);
 });

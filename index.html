@@ -32,59 +32,107 @@
         <!-- =========== SLIDE =========== -->
 
         <slide>
-          <h1>Applause</h1>
-          <h3>HTML presentations powered by Angular JS</h3>
-
-          <div class="key-wrapper">
-            <div><span class="key dark-keys">&#9658;</span> or <span class="key dark-keys">space</span> next slide</div>
-            <div><span class="key dark-keys">&#9668;</span> previous</div>
-            <div><span class="key dark-keys">enter</span> toggle "go to" popup</div>
-          </div>
+          <h1 class="abs-center">AngularJs Quickstart</h1>
           <note>This is what is called a speaker note!</note>
         </slide>
-
-        <slide>
-          <h2>Why another presentation framework?</h2>
-          <p>There are plenty of presentation frameworks made with HTML, CSS and Javascript around. So why we need another one?</p>
-          <p>We probably don't. I've started this project just because I wanted to improve my Angular JS skills.</p>
-          <blockquote><code class="inline">blockquote</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit</blockquote>
-          <note>This is the second note</note>
+        
+        <slide steps="9">
+          <h2>Per chi è il corso?</h2>
+          <div step="1">
+            <h4>Web Desingers</h4>
+          </div>
+          <div step="2">
+            <h4>FE Developers (coming from Html, Css, jQuery)</h4>
+          </div>
+          <div step="3">
+            <h4>Developer from other languages</h4>
+          </div>
+          <div step="4">
+            <h2>Argomenti che tratteremo</h2>
+          </div>
+          <div step="5">
+            <h4>Approccio MVVM tipico di Angular</h4>
+          </div>
+          <div step="6">
+            <h4>Two-Way Data Binding</h4>
+          </div>
+          <div step="7">
+            <h4>Consumo di risorse REST</h4>
+          </div>
+          <div step="8">
+            <h4>Integrazione di componenti</h4>
+          </div>
+          <div step="9">
+            <h2>Let's Start!</h2>
+          </div>
         </slide>
 
-        <slide>
-          <h2>Presenter mode</h2>
-          <table>
-            <tr>
-              <th>Normal view</th>
-              <th>Presenter mode</th>
-            </tr>
-            <tr>
-              <td><img src="assets/theme/images/slide-single.gif" alt=""/></td>
-              <td><img src="assets/theme/images/slide-presenter.gif" alt=""/></td>
-            </tr>
-          </table>
-          <p>In presenter mode, you can see the current and the upcoming slide.</p>
-          <p>To enter presenter mode, you just need to attach <code class="inline">?preview</code> in your URL. <a href="?preview">Try it out!</a></p>
-          <p>Slides are synchronized between tabs.</p>
+        <slide steps="5">
+          <h2>Cos'è AngularJs?</h2>
+          <div step="1" class="text-center">
+            <h3>Superheroic JavaScript MVW Framework</h3>
+          </div>
+          <div step="2">
+            <h3>Static or Dynamic SPA (but not only)</h3>
+          </div>
+          <div step="3">
+            <h3>Extend the Html</h3>
+          </div>
+          <div step="4">
+            <h3>Quick, Expressive and modular</h3>
+          </div>
+          <div step="5">
+            <h3>Hybrid Application (Ionic)</h3>
+          </div>
+          <note>W => Whatever Works for you</note>
         </slide>
 
-        <slide>
-          <h2>Code highlighting</h2>
-            <code prism class="language-javascript">
-              applause.directive('slide', function (Appdata) {
-                return {
-                  restrict: 'EA',
-                  transclude: true,
-                  replace: true,
-                  scope: {}
-                };
-              });
 
+        <slide steps="4">
+          <h2>I vantaggi di AngularJs</h2>
+          <div step="1">
+            <h3>Applicazione Reattive</h3>
+          </div>
+          <div step="2">
+            <h3>Sviluppo rapido</h3>
+          </div>
+          <div step="3">
+            <h3>Modulare</h3>
+          </div>
+          <div step="4">
+            <h3>Testabile</h3>
+          </div>
+          <note>Reattive => rispondono all'input dell'utente</note>
+        </slide>
+
+        <slide steps="3">
+          <h2>Come funziona il corso?</h2>
+          <div step="1">
+            <h3>Poca Teoria (il minimo indispensabile)</h3>
+          </div>
+          <div step="2">
+            <h3>Molta Pratica</h3>
+          </div>
+          <div step="3">
+            <h2>Domande domande domande!</h2>
+          </div>
+        </slide>
+
+        <slide steps="2">
+          <h2>Data Binding</h2>
+          <div step="1" class="text-center" style="margin-top: 100px">
+            <input type="text" ng-model="name" placeholder="Insert your name!"/>
+            <h3>Hi {{name}}!</h3>
+          </div>
+          <div step="2" style="margin-top: 100px">
+              <div class="ng-non-bindable">
+            <code prism class="language-markup">
+                &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
+                &lt;div&gt;Hi &lbrace;{ name }}!&lt;/div&gt;
             </code>
-            <p>Applause uses <a href="http://prismjs.com/">Prism JS</a> for code highlighting. You need to add the "language-*" class and the "prism" attribute to your element:
-              <br>
-              <code class="inline">&lt;div <strong>prism class="language-javascript"</strong>&gt;your code here&lt;/div&gt;</code>
-            </p>
+              </div>
+
+          </div>
         </slide>
 
       <slide markdown>
