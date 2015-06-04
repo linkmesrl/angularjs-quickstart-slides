@@ -495,8 +495,8 @@
           });
         </code>
         <code prism class="language-markup">
-          &lt;section ng-controller="listCtrl">
-          &lt;/section>
+  &lt;section ng-controller="listCtrl">
+  &lt;/section>
         </code>
       </slide>
 
@@ -535,36 +535,36 @@
       <slide>
       <h2>How to bind <code class="inline">controller</code> to Html</h2>
         <code prism class="language-markup" style="margin-top: 100px;">
-          &lt;section ng-controller="listCtrl" class="row">
-            &lt;article class="col-sm-9">
-              // Form and List Html
-            &lt;/article>
-            &lt;article ng-controller="cartCtrl" class="col-sm-3">
-              // Cart Html
-            &lt;/article>
-          &lt;/section>
+  &lt;section ng-controller="listCtrl" class="row">
+    &lt;article class="col-sm-9">
+      // Form and List Html
+    &lt;/article>
+    &lt;article ng-controller="cartCtrl" class="col-sm-3">
+      // Cart Html
+    &lt;/article>
+  &lt;/section>
         </code>
       </slide>
 
       <slide>
         <h2>Attach a property to the <code class="inline">$scope</code></h2>
         <code prism class="language-javascript">
-          angular.module('groceryStore',[])
-          .controller('listCtrl', function($scope, $http){
+  angular.module('groceryStore',[])
+  .controller('listCtrl', function($scope, $http){
 
-              $scope.categories = ['Fruits', 'Vegetables'];
+      $scope.categories = ['Fruits', 'Vegetables'];
 
-              $scope.products = [
-                {
-                    category : "Fruits",
-                    name : "Apple",
-                    quantity : "12"
-                },
-                {
-                    ...
-                }
-              ];
-          });
+      $scope.products = [
+        {
+            category : "Fruits",
+            name : "Apple",
+            quantity : "12"
+        },
+        {
+            ...
+        }
+      ];
+  });
         </code>
       </slide>
 
@@ -572,13 +572,13 @@
         <h2>Read a property from the <code class="inline">$scope</code></h2>
         <div class="ng-non-bindable" style="margin-top: 125px;">
           <code prism class="language-markup">
-            &lt;div class="well" ng-repeat="product in products | filter:query">
-            &lt;div class="row">
-                &lt;div class="col-sm-3">{{product.category}}&lt;/div>
-                &lt;div class="col-sm-3">{{product.name}}&lt;/div>
-                &lt;div class="col-sm-3">{{product.quantity}}&lt;/div>
-                &lt;/div>
-            &lt;/div>
+  &lt;div class="well" ng-repeat="product in products | filter:query">
+  &lt;div class="row">
+      &lt;div class="col-sm-3">{{product.category}}&lt;/div>
+      &lt;div class="col-sm-3">{{product.name}}&lt;/div>
+      &lt;div class="col-sm-3">{{product.quantity}}&lt;/div>
+      &lt;/div>
+  &lt;/div>
           </code>
         </div>
       </slide>
@@ -586,18 +586,18 @@
       <slide>
         <h2>Attach methods to the <code class="inline">$scope</code></h2>
         <code prism class="language-javascript" style="margin-top: 50px;">
-          angular.module('groceryStore',[])
-          .controller('listCtrl', function($scope, $http){
+  angular.module('groceryStore',[])
+  .controller('listCtrl', function($scope, $http){
 
-              $scope.addProduct = function(){
-                  $scope.products.push($scope.newProduct);
-                  $scope.newProduct = null;
-              };
+      $scope.addProduct = function(){
+          $scope.products.push($scope.newProduct);
+          $scope.newProduct = null;
+      };
 
-              $scope.addToCart = function(product){
-                  $scope.cart.push(product);
-              };
-          });
+      $scope.addToCart = function(product){
+          $scope.cart.push(product);
+      };
+  });
         </code>
       </slide>
 
@@ -624,8 +624,12 @@
 
       <slide>
         <h2>Exercise</h2>
-        <h3>Define a <code class="inline">listCtrl</code></h3>
-        <h3>Define a method to create a product</h3>
+        <div class="abs-center">
+          <h3>Define a <code class="inline">listCtrl</code></h3>
+          <h3>Define a method to create a product</h3>
+        </div>
+      </slide>
+      <slide>
         <h3>Define a <code class="inline">cartCtrl</code></h3>
         <h3>Define a method to add a product to the cart</h3>
         <h3>Repeat the cart in the <code class="inline">cartCtrl</code></h3>
