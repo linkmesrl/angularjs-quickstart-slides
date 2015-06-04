@@ -360,6 +360,9 @@ img.center {
 img.round {
   border-radius: 10px; }
 
+.ng-non-bindable > code[class*="language-"] {
+  white-space: pre !important; }
+
 :not(pre) > code[class*="language-"] {
   white-space: pre-line !important;
   padding: 1em !important; }
@@ -370,6 +373,9 @@ img.round {
     width: 45%; }
   .col.half + .col.half {
     margin-left: 10%; }
+
+code:not(.inline) {
+  width: 100%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Applause - HTML presentations powered by AngularJS</title>
+    <title>AngularJS QuickStart</title>
     <meta name="description" content="HTML presentations powered by Angular JS">
     <meta name="viewport" content="width=device-width">
     <!-- build:css assets/styles/applause.css -->
@@ -441,7 +441,7 @@
       </slide>
 
       <slide>
-        <h2>Exrcise</h2>
+        <h2>Exercise</h2>
         <h3>Creare una pagina web in cui un utente possa inserire dei prodotti e filtrarli per nome</h3>
         <p>I prodotti devono essere salvati in un array <code class="inline">products</code></p>
         <p>
@@ -454,6 +454,188 @@
         <h3>Qui è disponibile un template Html vuoto</h3>
         <h3>Repo Address!</h3>
       </slide>
+
+<!-- ================================================================== LESSON 2 ================================================================== -->
+
+      <slide steps="5">
+        <h2>Resume</h2>
+        <div step="1">
+          <h3>Data Binging</h3>
+        </div>
+        <div step="2">
+          <h3><code class="inline">ng-model</code></h3>
+        </div>
+        <div step="3">
+          <h3><code class="inline">ng-click</code></h3>
+        </div>
+        <div step="4">
+          <h3><code class="inline">ng-repeat</code></h3>
+        </div>
+        <div step="5">
+          <h3><code class="inline">ng-submit</code></h3>
+        </div>
+      </slide>
+      
+      <slide>
+        <h2 class="abs-center">It's time to write in Javascript!</h2>
+      </slide>
+
+      <slide>
+        <h2> AngularJs Application Structure</h2>
+        <img src="assets/theme/images/app_structure_01.png" height="358" width="562" alt="" class="img-responsive abs-center">
+      </slide>
+
+      <slide>
+        <h2> AngularJs Application Structure</h2>
+        <h3><code class="inline">main.js</code></h3>
+        <code prims class="language-javascript">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope){
+            // my code
+          });
+        </code>
+        <code prism class="language-markup">
+          &lt;section ng-controller="listCtrl">
+          &lt;/section>
+        </code>
+      </slide>
+
+      <slide steps="3">
+        <h2>What is a <code class="inline">Controller</code>?</h2>
+        <div class="abs-center">
+          <div step="1">
+            <h3>A Js function that react to user input</h3>
+          </div>
+          <div step="2">
+            <h3>The place in wich you define your Business Logic</h3>
+          </div>
+          <div step="3">
+            <h3>The place in wich set up our data</h3>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>What is <code class="inline">$scope</code>?</h2>
+        <div step="1">
+          <h3>It is an execution context for expressions.</h3>
+        </div>
+        <div step="2">
+          <h3>Scopes are arranged in hierarchical structure which mimic the DOM structure of the application.</h3>
+        </div>
+        <div step="3">
+          <h2>Scopes are the glue between application controller and the view.</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <img class="abs-center"src="assets/theme/images/app-demo.png" alt="">
+      </slide>
+
+      <slide>
+      <h2>How to bind <code class="inline">controller</code> to Html</h2>
+        <code prism class="language-markup" style="margin-top: 100px;">
+          &lt;section ng-controller="listCtrl" class="row">
+            &lt;article class="col-sm-9">
+              // Form and List Html
+            &lt;/article>
+            &lt;article ng-controller="cartCtrl" class="col-sm-3">
+              // Cart Html
+            &lt;/article>
+          &lt;/section>
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Attach a property to the <code class="inline">$scope</code></h2>
+        <code prism class="language-javascript">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope, $http){
+
+              $scope.categories = ['Fruits', 'Vegetables'];
+
+              $scope.products = [
+                {
+                    category : "Fruits",
+                    name : "Apple",
+                    quantity : "12"
+                },
+                {
+                    ...
+                }
+              ];
+          });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Read a property from the <code class="inline">$scope</code></h2>
+        <div class="ng-non-bindable" style="margin-top: 125px;">
+          <code prism class="language-markup">
+            &lt;div class="well" ng-repeat="product in products | filter:query">
+            &lt;div class="row">
+                &lt;div class="col-sm-3">{{product.category}}&lt;/div>
+                &lt;div class="col-sm-3">{{product.name}}&lt;/div>
+                &lt;div class="col-sm-3">{{product.quantity}}&lt;/div>
+                &lt;/div>
+            &lt;/div>
+          </code>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Attach methods to the <code class="inline">$scope</code></h2>
+        <code prism class="language-javascript" style="margin-top: 50px;">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope, $http){
+
+              $scope.addProduct = function(){
+                  $scope.products.push($scope.newProduct);
+                  $scope.newProduct = null;
+              };
+
+              $scope.addToCart = function(product){
+                  $scope.cart.push(product);
+              };
+          });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Call a method from the <code class="inline">$scope</code></h2>
+        <code prism class="language-markup">
+  &lt;form ng-submit="addProduct()"> ... &lt;/form>
+        </code>
+        <code prism class="language-markup">
+  &lt;div class="well" ng-repeat="product in products | filter:query">
+      &lt;div class="row">
+          &lt;div class="col-sm-3">{{product.category}}&lt;/div>
+          &lt;div class="col-sm-3">{{product.name}}&lt;/div>
+          &lt;div class="col-sm-3">{{product.quantity}}&lt;/div>
+          &lt;div class="col-sm-3">
+              &lt;a href="" ng-click="addToCart(product)" class="btn btn-primary">
+                  Buy
+              &lt;/a>
+          &lt;/div>
+      &lt;/div>
+  &lt;/div>
+          </code>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <h3>Define a <code class="inline">listCtrl</code></h3>
+        <h3>Define a method to create a product</h3>
+        <h3>Define a <code class="inline">cartCtrl</code></h3>
+        <h3>Define a method to add a product to the cart</h3>
+        <h3>Repeat the cart in the <code class="inline">cartCtrl</code></h3>
+      </slide>
+
+      <!-- 
+      // TODO 
+      - 
+      -->
+
       <!-- =========== /SLIDE =========== -->
 
       </div>
