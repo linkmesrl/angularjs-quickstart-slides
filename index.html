@@ -151,33 +151,33 @@
         <slide>
           <h3>Creare un file Html</h3>
           <code prism class="language-markup">
-            &lt;!DOCTYPE html&gt;
-            &lt;html lang="en"&gt;
-            &lt;head&gt;
-              &lt;meta charset="UTF-8"&gt;
-              &lt;title>AngularJs QuickStart&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-              
-            &lt;/body&gt;
-            &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>AngularJs QuickStart&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+  &lt;/html&gt;
           </code>
         </slide>
 
         <slide steps="1">
           <h3>Caricare Angular e inizializzare l'applicazione</h3>
           <code prism class="language-markup">
-            &lt;!DOCTYPE html&gt;
-            &lt;html lang="en" <strong>ng-app</strong>&gt;
-            &lt;head&gt;
-              &lt;meta charset="UTF-8"&gt;
-              &lt;title>AngularJs QuickStart&lt;/title&gt;
-              <strong>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"&gt;&lt;/script&gt;</strong>
-            &lt;/head&gt;
-            &lt;body&gt;
-              
-            &lt;/body&gt;
-            &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en" <strong>ng-app</strong>&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>AngularJs QuickStart&lt;/title&gt;
+    <strong>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"&gt;&lt;/script&gt;</strong>
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+  &lt;/html&gt;
           </code>
           <div step="1">
             <h2>Fatto!</h2>
@@ -193,8 +193,8 @@
           <div step="1" style="margin-top: 100px">
               <div class="ng-non-bindable">
             <code prism class="language-markup">
-                &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
-                &lt;div&gt;Hi &lbrace;{ name }}!&lt;/div&gt;
+  &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
+  &lt;div&gt;Hi &lbrace;{ name }}!&lt;/div&gt;
             </code>
               </div>
 
@@ -226,9 +226,9 @@
         <div step="1" style="margin-top: 50px">
             <div class="ng-non-bindable">
           <code prism class="language-markup">
-              &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
-              &lt;div&gt;Hi {{ name }}!&lt;/div&gt;
-              &lt;div&gt;How are you {{ name }}?&lt;/div&gt;
+  &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
+  &lt;div&gt;Hi {{ name }}!&lt;/div&gt;
+  &lt;div&gt;How are you {{ name }}?&lt;/div&gt;
           </code>
             </div>
 
@@ -247,10 +247,10 @@
         <div step="1" style="margin-top: 50px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="number" ng-model="a"/&gt;
-              &lt;h4&gt;+&lt;/h4&gt;
-              &lt;input type="number" ng-model="b"/&gt;
-              &lt;h3&gt;Result is {{a+b}}!&lt;/h3&gt;    
+  &lt;input type="number" ng-model="a"/&gt;
+  &lt;h4&gt;+&lt;/h4&gt;
+  &lt;input type="number" ng-model="b"/&gt;
+  &lt;h3&gt;Result is {{a+b}}!&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -266,8 +266,8 @@
         <div step="1">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;button ng-click="value = 3" ng-init="value = 1"&gt;Set Value to 3&lt;/button&gt;
-              &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
+  &lt;button ng-click="value = 3" ng-init="value = 1"&gt;Set Value to 3&lt;/button&gt;
+  &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -283,8 +283,8 @@
         <div step="1">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
-              &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
+  &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
+  &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -302,10 +302,10 @@
         <div step="1">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
-              &lt;h4&gt;Value is: {{value}}&lt;/h4&gt;
-              &lt;h3 ng-hide="value > 3"&gt;I will be hidden if value is greater than 3&lt;/h3&gt;
-              &lt;h3 ng-show="value &gt; 3"&gt;I will be visible if value is greater than 3&lt;/h3&gt;    
+  &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
+  &lt;h4&gt;Value is: {{value}}&lt;/h4&gt;
+  &lt;h3 ng-hide="value > 3"&gt;I will be hidden if value is greater than 3&lt;/h3&gt;
+  &lt;h3 ng-show="value &gt; 3"&gt;I will be visible if value is greater than 3&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -320,12 +320,12 @@
           <button ng-click="array.push(name)" ng-init="array = []">Insert Name</button>
           <h3 style="margin-top: 10px">Value is: {{array}}</h3>
         </div>
-        <div step="1">
+        <div step="1" style="margin-top: 20px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="text" ng-model="name"/&gt;
-              &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
-              &lt;h3 style="margin-top: 10px"&gt;Value is: {{array}}&lt;/h3&gt;   
+  &lt;input type="text" ng-model="name"/&gt;
+  &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
+  &lt;h3 style="margin-top: 10px"&gt;Value is: {{array}}&lt;/h3&gt;   
             </code>
           </div>
         </div>
@@ -340,12 +340,12 @@
           <button ng-click="array.push(name)" ng-init="array = []">Insert Name</button>
           <h2 ng-repeat="name in array">{{name}}</h2>
         </div>
-        <div step="1">
+        <div step="1" style="margin-top: 20px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="text" ng-model="name"/&gt;
-              &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
-              &lt;h2 ng-repeat="name in array"&gt;{{name}}&lt;/h2&gt;
+  &lt;input type="text" ng-model="name"/&gt;
+  &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
+  &lt;h2 ng-repeat="name in array"&gt;{{name}}&lt;/h2&gt;
             </code>
           </div>
         </div>
@@ -366,10 +366,10 @@
         <div step="1" style="margin-top: 60px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="text" ng-model="name"/&gt;
-              &lt;button ng-click="array.push(name)" ng-init="array = [...]"&gt;Insert Name&lt;/button&gt;
-              &lt;input type="text" ng-model="query"/&gt;
-              &lt;h2 ng-repeat="name in array | filter:query"&gt;{{name}}&lt;/h2&gt;
+  &lt;input type="text" ng-model="name"/&gt;
+  &lt;button ng-click="array.push(name)" ng-init="array = [...]"&gt;Insert Name&lt;/button&gt;
+  &lt;input type="text" ng-model="query"/&gt;
+  &lt;h2 ng-repeat="name in array | filter:query"&gt;{{name}}&lt;/h2&gt;
             </code>
           </div>
         </div>
@@ -421,20 +421,21 @@
         <h2>Data-Binding on steroids</h2>
         <div class="ng-non-bindable">
           <code prism class="language-markup">
-            &lt;!-- Insert -->
-            &lt;!-- Participant = {name: 'Matteo', age: '29'} -->      
-            &lt;input type="text" ng-model="participant.name"/>
-            &lt;input type="number" ng-model="participant.age">
-            &lt;button ng-click="list.push({name: participant.name, age: participant.age})" ng-init="list = []">Insert&lt;/button>
+&lt;!-- Insert -->
+&lt;!-- Participant = {name: 'Matteo', age: '29'} -->      
+&lt;input type="text" ng-model="participant.name"/>
+&lt;input type="number" ng-model="participant.age">
+&lt;button ng-click="list.push({name: participant.name, age: participant.age})" 
+ng-init="list = []">Insert&lt;/button>
 
-            &lt;!-- Filter -->
-            Name &lt;input type="text" ng-model="query.name">
-            Age &lt;input type="text" ng-model="query.age">
+&lt;!-- Filter -->
+Name &lt;input type="text" ng-model="query.name">
+Age &lt;input type="text" ng-model="query.age">
 
-            &lt;!-- Repeat -->
-            &lt;div ng-repeat="person in list | filter:query">
-            &lt;span>{{person.name}}&lt;/span>
-            &lt;span>{{person.age}}&lt;/span>
+&lt;!-- Repeat -->
+&lt;div ng-repeat="person in list | filter:query">
+&lt;span>{{person.name}}&lt;/span>
+&lt;span>{{person.age}}&lt;/span>
           </code>
           <note>Objects and arrays are pushed by reference. Built-in types like numbers are pushed as a copy.</note>
         </div>
@@ -452,7 +453,19 @@
           Altri binding utili: <code class="inline">ng-submit</code> <code class="inline">ng-options (hard)</code>
         </p>
         <h3>Qui è disponibile un template Html vuoto</h3>
-        <h3>Repo Address!</h3>
+        <h3>
+          <a href="http://goo.gl/DGi6tc" target="_blank">goo.gl/DGi6tc</a>
+        </h3>
+      </slide>
+
+      <slide steps="2">
+        <h2>Homeworks!</h2>
+        <div step="1" style="margin-top: 200px">
+          <h3>Install <a href="https://nodejs.org/">NodeJs</a></h3>
+        </div>
+        <div step="2">
+          <h4>or a webserver</h4>
+        </div>
       </slide>
 
 <!-- ================================================================== LESSON 2 ================================================================== -->
@@ -587,7 +600,7 @@
         <h2>Attach methods to the <code class="inline">$scope</code></h2>
         <code prism class="language-javascript" style="margin-top: 50px;">
   angular.module('groceryStore',[])
-  .controller('listCtrl', function($scope, $http){
+  .controller('listCtrl', function($scope){
 
       $scope.addProduct = function(){
           $scope.products.push($scope.newProduct);
@@ -626,19 +639,221 @@
         <h2>Exercise</h2>
         <div class="abs-center">
           <h3>Define a <code class="inline">listCtrl</code></h3>
-          <h3>Define a method to create a product</h3>
+          <h3>Define a method to create a product (<code class="inline">.push</code>)</h3>
+          <h3>Define a method to remove a product (<code class="inline">.splice</code>)</h3>
         </div>
       </slide>
+
+      <slide steps="2">
+        <h2>Controller Inheritance</h2>
+        <div step="1">
+          <h3>Scopes are arranged in hierarchical structure which mimic the DOM structure of the application.</h3>
+        </div>
+        <div step="2">
+          <h2>A child controller can inherit from a parent controller</h2>
+        </div>
+      </slide>
+
       <slide>
-        <h3>Define a <code class="inline">cartCtrl</code></h3>
-        <h3>Define a method to add a product to the cart</h3>
-        <h3>Repeat the cart in the <code class="inline">cartCtrl</code></h3>
+        <h2>Controller Inheritance</h2>
+        <code prims class="language-javascript" style="margin-top: 50px">
+  angular.module('groceryStore',[])
+  .controller('parentCtrl', function($scope){
+
+    $scope.parentMethod = function(){/*...*/};
+
+    $scope.parentValue = "Matteo";
+  })
+  .controller('childCtrl', function($scope){
+    
+    $scope.parentMethod(); //it'll work
+    
+    // and I can read parentValue
+  });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Controller Inheritance</h2>
+        <div class="ng-non-bindable" style="margin-top: 125px;">
+          <code prism class="language-markup">
+  &lt;div ng-controller="parentCtrl">
+      &lt;!-- Some binding -->
+      {{parentValue}} &lt;!-- Matteo -->
+      &lt;div ng-controller="childCtrl">
+          &lt;!-- Some other binding -->
+          {{parentValue}} &lt;!-- Matteo -->
+          &lt;a ng-click="parentMethod()"></a> &lt;!-- it'll work -->
+      &lt;/div>
+  &lt;/div>
+          </code>
+        </div>
+      </slide>
+
+      <slide steps="1">
+        <h2>Pay Attention!</h2>
+        <div step="1" class="abs-center">
+          <h1>Works only one way!</h1>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Pay Attention!</h2>
+        <div class="col half">
+          <code prims class="language-javascript" style="margin-top: 50px">
+  angular.module('groceryStore',[])
+  .controller('parentCtrl', 
+    function($scope){
+
+      $scope.parentValue = "Matteo";
+  })
+  .controller('childCtrl', 
+    function($scope){
+    
+      $scope.parentValue = "Giovanni";
+  });
+          </code>
+        </div>
+        <div class="col half">
+          <div class="ng-non-bindable" style="margin-top: 125px;">
+            <code prism class="language-markup">
+&lt;div ng-controller="parentCtrl">
+  &lt;!-- Some binding -->
+  {{parentValue}} &lt;!-- Matteo -->
+  &lt;div ng-controller="childCtrl">
+    &lt;!-- Some other binding -->
+    {{parentValue}} &lt;!-- Giovanni -->
+  &lt;/div>
+&lt;/div>
+            </code>
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <div class="abs-center">
+          <h3>Define a <code class="inline">cartCtrl</code></h3>
+          <h3>Define a method to add a product to the cart <code class="inline">$scope.cart</code></h3>
+          <h3>Repeat the cart in the <code class="inline">cartCtrl</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>Request data from a Server </h2>
+        <div step="1">
+          <h3>Angular play nice with REST API</h3>
+        </div>
+        <div step="2">
+          <h3>Respond in JSON</h3>
+        </div>
+        <div step="3">
+          <h3>Use Http Statuses</h3>
+        </div>
+        <div step="4" style="margin-top: 120px">
+          <h2>JSON does NOT mean REST</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>The core <code class="inline">http</code> service</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+  var req = {
+    method: 'POST',
+    url: 'http://example.com',
+    data: { test: 'test' }
+  };
+
+  $http(req)
+  .success(function(res){...})
+  .error(function(err){...});
+        </code>
+      </slide>
+
+      <slide steps="2">
+        <h2>Shortcut Methods</h2>
+        <div step="1">
+          <code prism class="language-javascript" style="margin-top: 50px">
+  $http.get('http://example.com')
+  .success(function(res){...})
+  .error(function(err){...});
+          </code>
+        </div>
+        <div step="2">
+          <code prism class="language-javascript" style="margin-top: 100px">
+  var data = {firstName: 'Matteo', occupation: 'Frontend Developer'};
+
+  $http.post('http://example.com', data)
+  .success(function(res){...})
+  .error(function(err){...});
+          </code>
+        </div>
+      </slide>
+
+      <slide steps="2">
+        <h2>Response Methods</h2>
+        <div step="1">
+          <h3><code class="inline">.success</code></h3>
+          <code prism class="language-javascript">
+  .success(function(res, status, headers, config){
+    // executed for 200 and 300 statuses
+  })
+          </code>
+        </div>
+        <div step="2">
+          <h3><code class="inline">.error</code></h3>
+          <code prism class="language-javascript">
+  .error(function(res, status, headers, config){
+    // executed for 400 and 500 statuses
+  })
+          </code>
+        </div>
+      </slide>
+
+      <slide>
+        <h2><code class="inline">http</code> return a promise</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+  var data = {firstName: 'Matteo', occupation: 'Frontend Developer'};
+
+  $http.post('http://example.com', data)
+  .then(function(res){
+    // this is the success case
+  })
+  .catch(function(err){
+    // this is the error case
+  });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>My First Request</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+  angular.module('groceryStore',[])
+  .controller('listCtrl', function($scope, $http){
+
+    // Retrieve data form the backend
+    $http.get('../mocks/list.json')
+    .success(function(list){
+        $scope.products = list;
+    })
+    .error(function(err){
+        $scope.error = err.data.message;
+    });
+  });
+        </code>
+        <note>REMEBER THE INJECT!</note>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <div class="abs-center">
+          <h3>Load list data with <code class="inline">$http</code> from <code class="inline">mocks/list.json</code></h3>
+        </div>
       </slide>
 
       <!-- 
       // TODO
-      - vedere se dividere l'esercizio sopra in due parti 
-      - $http
+      - $resource????
       -->
 
       <!-- =========== /SLIDE =========== -->

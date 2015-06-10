@@ -29,7 +29,7 @@ img.round {
   white-space: pre !important; }
 
 :not(pre) > code[class*="language-"] {
-  white-space: pre-line !important;
+  /*white-space: pre-line !important;*/
   padding: 1em !important; }
 
 .col {

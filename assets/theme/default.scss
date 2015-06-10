@@ -26,6 +26,7 @@ body {
 
 .slide {
   background-color: $slideBg;
+  overflow: hidden;
 }
 
 #progress-bar {
