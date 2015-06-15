@@ -13,8 +13,7 @@ body {
   background: #333; }
 
 .slide {
-  background-color: #dedede;
-  overflow: hidden; }
+  background-color: #dedede; }
 
 #progress-bar {
   border-top: 1px solid #333;

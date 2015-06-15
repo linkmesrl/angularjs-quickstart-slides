@@ -468,6 +468,8 @@ Age &lt;input type="text" ng-model="query.age">
         </div>
       </slide>
 
+      <!-- TODO add some slide on Bower Etc -->
+
 <!-- ================================================================== LESSON 2 ================================================================== -->
 
       <slide steps="5">
@@ -486,6 +488,26 @@ Age &lt;input type="text" ng-model="query.age">
         </div>
         <div step="5">
           <h3><code class="inline">ng-submit</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>Resume</h2>
+        <div style="width: 100%">
+          <div step="1" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/grunt.png" height="210" width="144">
+          </div>
+          <div step="2" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/gulp.png" height="210" width="94" alt="">
+          </div>
+        </div>
+        <div style="width: 100%">
+          <div step="3" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/bower.png" height="210" width="165">
+          </div>
+          <div step="4" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/yeoman.png" height="210" width="158" alt="">
+          </div>
         </div>
       </slide>
       
@@ -542,7 +564,8 @@ Age &lt;input type="text" ng-model="query.age">
       </slide>
 
       <slide>
-        <img class="abs-center"src="assets/theme/images/app-demo.png" alt="">
+        <h2>How to bind <code class="inline">controller</code> to Html</h2>
+        <img class="abs-center"src="assets/theme/images/app-demo-1.png">
       </slide>
 
       <slide>
@@ -640,7 +663,6 @@ Age &lt;input type="text" ng-model="query.age">
         <div class="abs-center">
           <h3>Define a <code class="inline">listCtrl</code></h3>
           <h3>Define a method to create a product (<code class="inline">.push</code>)</h3>
-          <h3>Define a method to remove a product (<code class="inline">.splice</code>)</h3>
         </div>
       </slide>
 
@@ -652,6 +674,10 @@ Age &lt;input type="text" ng-model="query.age">
         <div step="2">
           <h2>A child controller can inherit from a parent controller</h2>
         </div>
+      </slide>
+      
+      <slide>
+        <img class="abs-center"src="assets/theme/images/app-demo-2.png" alt="">
       </slide>
 
       <slide>
@@ -733,7 +759,7 @@ Age &lt;input type="text" ng-model="query.age">
       <slide>
         <h2>Exercise</h2>
         <div class="abs-center">
-          <h3>Define a <code class="inline">cartCtrl</code></h3>
+          <h3>Define a child <code class="inline">cartCtrl</code></h3>
           <h3>Define a method to add a product to the cart <code class="inline">$scope.cart</code></h3>
           <h3>Repeat the cart in the <code class="inline">cartCtrl</code></h3>
         </div>
@@ -849,6 +875,70 @@ Age &lt;input type="text" ng-model="query.age">
         <div class="abs-center">
           <h3>Load list data with <code class="inline">$http</code> from <code class="inline">mocks/list.json</code></h3>
         </div>
+      </slide>
+
+      <slide steps="5">
+        <h2>REST Resources</h2>
+        <div step="1">
+          <h3><code class="inline">/users [GET]</code> Query the list of users</h3>
+        </div>
+        <div step="2">
+          <h3><code class="inline">/users/1 [GET]</code> Get a single user</h3>
+        </div>
+        <div step="3">
+          <h3><code class="inline">/users [POST]</code> Create a user</h3>
+        </div>
+        <div step="4">
+          <h3><code class="inline">/users/1 [POST]</code> Update a user</h3>
+        </div>
+        <div step="5">
+          <h3><code class="inline">/users/1 [DELETE]</code> Delete a user</h3>
+        </div>
+        <note>Parlane solo se avanza del tempo</note>
+      </slide>
+
+      <slide>
+        <h2>Angular <code class="inline">$resource</code></h2>
+        <code prism class="language-javascript abs-center">
+  var User = $resource('/user/:userId', {userId:'@id'});
+        </code>
+      </slide>
+      <slide>
+        <h2>Query</h2>
+        <h3><code class="inline">/users [GET]</code> Query the list of users</h3>
+        <code prism class="language-javascript abs-center">
+  var users = User.query().then(successHandler, errorHandler);
+        </code>
+      </slide>
+      <slide>
+        <h2>Get</h2>
+        <h3><code class="inline">/users/1 [GET]</code> Get a single user</h3>
+        <code prism class="language-javascript abs-center">
+  var user = User.get({userId: 1}).then(successHandler, errorHandler);
+        </code>
+      </slide>
+      <slide>
+        <h2>Create</h2>
+        <h3><code class="inline">/users [POST]</code> Create a user</h3>
+        <code prism class="language-javascript abs-center">
+  var newUser = new User({name: 'Matteo'});
+  newUser.$save().then(successHandler, errorHandler);
+        </code>
+      </slide>
+      <slide>
+        <h2>Update</h2>
+        <h3><code class="inline">/users/1 [POST]</code> Update a user</h3>
+        <code prism class="language-javascript abs-center">
+  user.name = 'Giovanni';
+  user.$save();
+        </code>
+      </slide>
+      <slide>
+        <h2>Delete</h2>
+        <h3><code class="inline">/users/1 [DELETE]</code> Delete a user</h3>
+        <code prism class="language-javascript abs-center">
+  user.$remove();
+        </code>
       </slide>
 
       <!-- 
