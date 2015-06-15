@@ -8,9 +8,18 @@ Slides for the workshop @ Login
 - Create an Angular Application
 - Data-Binding
 
-**TODO**
-- Add LinkMe Logo in Slide 2
-- Add repo lesson 1 address in Slide 23
+## Lesson 2:
+- Controllers
+- $scope
+- Controller Inheritance
+- $http
+- _Optional $resource_
+
+## To view the slide
+
+- `npm install`
+- `bower install`
+- `npm start` || `gulp serve`
 
 _Powered By_
 
