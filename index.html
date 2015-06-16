@@ -577,6 +577,32 @@ Age &lt;input type="text" ng-model="query.age">
         <h2 class="abs-center">It's time to write in Javascript!</h2>
       </slide>
 
+      <slide steps="1">
+        <img style="display: block; margin: 0 auto;" src="assets/theme/images/stop.png" height="200" width="200" alt="">
+        <div step="1" style="margin-top: 150px;">
+          <h2>Before Coding, Debug is needed!</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Our old friend <code class="inline">console.log(myVar);</code></h2>
+        <code prims class="language-javascript" style="margin-top: 60px;">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope){
+            $scope.myFunction = function(a){
+              console.log(a);
+              // do stuff;
+              return b;
+            }
+          });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Chrome Dev Tools</h2>
+        <img src="assets/theme/images/devtools.png" height="404" width="970" alt="" style="margin-top: 40px">
+      </slide>
+
       <slide>
         <h2> AngularJs Application Structure</h2>
         <img src="assets/theme/images/app_structure_01.png" height="358" width="562" alt="" class="img-responsive abs-center">
@@ -1069,14 +1095,145 @@ Age &lt;input type="text" ng-model="query.age">
           <h3><code class="inline">.config</code></h3>
         </div>
       </slide>
+
+      <slide steps="1">
+        <h2>What Services Are?</h2>
+        <div step="1">
+          <h3 class="abs-center">A service is a function or an object and is used to share data and/or behavior.</h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>How to define a service?</h2>
+        <code prism class="language-javascript">
+          angular.module('groceryStore',[])
+          .service('myService', function(){
+
+            // store some data
+            this.myData = 'data';
+
+            // define a method
+            this.getData = function(){
+              return this.myData;
+            };
+          });
+        </code>
+        <note>Questo non è da fare! Usa .value</note>
+      </slide>
+
+      <slide steps="1">
+        <h2>How to use a service?</h2>
+        <code prism class="language-javascript" style="margin-top: 80px;">
+          angular.module('groceryStore',[])
+          .controller('myCtrl', function(myService){
+
+            $scope.data = myService.getData();
+
+          });
+        </code>
+        <div step="1" style="margin-top: 80px;">
+          <h2>Let's see an example!</h2>
+        </div>
+        <note>Questo non è da fare! Usa .value</note>
+      </slide>
+
+      <slide>
+        <h2>Remember the <code class="inline">$http</code> request?</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+          $http.get('../mocks/list.json');
+          .success(function(list){
+              $scope.products = list;
+          })
+          .error(function(err){
+              throw err;
+          });
+        </code>
+        <note>Funzionava, perchè devo cambiarla?</note>
+      </slide>
+
+      <slide steps="2">
+        <h2>Let's move it into a <code class="inline">.service</code></h2>
+        <code prism class="language-javascript" style="margin-top: 50px">
+          angular.module('groceryStore',[])
+          .service('listService', function($http){
+            this.getList = function(){
+                return $http.get('../mocks/list.json');
+            }
+          });
+        </code>
+        <div>
+          <div step="1" class="col half">
+            <h3>I can use this method around my app</h3>
+          </div>
+          <div step="2" class="col half">
+            <h3>If the url change, I have to change it in one place only</h3>
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Use it in our <code class="inline">.controller</code></h2>
+        <code prism class="language-javascript" style="margin-top: 50px">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope, listService){
+
+            // Retrieve data form the backend
+            listService.getList()
+            .success(function(list){
+                $scope.products = list;
+            })
+            .error(function(err){
+                throw err; // or better notify the user
+            });
+
+          });
+        </code>
+      </slide>
       
+      <slide>
+        <h2>Exercise</h2>
+        <div class="abs-center">
+          <h3>Move the <code class="inline">$http</code> call in a <code class="inline">listService</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>Dependency Injection Sintax</h2>
+        <div step="1">
+          <code prism class="language-javascript">
+            angular.module('groceryStore',[])
+            .service('listService', function($http){
+              // code
+            });
+          </code>
+        </div>
+        <div step="2">
+          <h3>This can lead to problem while building</h3>
+        </div>
+        <div step="3">
+          <h4>Take care and use ngAnnotate</h4>
+        </div>
+        <div step="4">
+          <code prism class="language-javascript">
+            angular.module('groceryStore',[])
+            .service('listService', ['$http', function($http){
+              // code
+            }]);
+          </code>
+        </div>
+      </slide>
+      
+      <slide>
+        <h2>Exercise</h2>
+        <h3>Separate <code class="inline">listCtrl</code> and <code class="inline">cartCtrl</code></h3>
+        <h3>Create a <code class="inline">cartService</code> to handle the cart with:</h3>
+        <h4><code class="inline">this.cart</code> to store the data</h4>
+        <h4><code class="inline">this.add(product)</code> to add a product</h4>
+        <h4><code class="inline">this.remove(id)</code> to remove a product</h4>
+        <h3><i>Optional</i> show the number if cart items in the header</h3>
+      </slide>
       <!-- 
       TODO
-      - Introduzione ai servizi
-      - Vantaggi dei servici
-      - Come si definisce un servizio
-      - Esercizio: Separare i controller 
-
       - Introduzione alle direttive
       - Come si definisce una direttiva
       - Esercizio: Integrazione della direttiva nella header
