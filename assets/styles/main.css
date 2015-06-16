@@ -373,6 +373,10 @@ img.round {
     width: 45%; }
   .col.half + .col.half {
     margin-left: 10%; }
+  .col.third {
+    width: 30%; }
+  .col.third + .col.third {
+    margin-left: 5%; }
 
 code:not(.inline) {
   width: 100%; }
@@ -454,7 +458,7 @@ table {
     transition: all .4s ease;
     display: block !important; }
   #go-to input {
-    width: 58px;
+    width: 128px;
     margin-left: 4px;
     padding: 4px;
     text-align: center;

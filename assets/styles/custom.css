@@ -38,6 +38,10 @@ img.round {
     width: 45%; }
   .col.half + .col.half {
     margin-left: 10%; }
+  .col.third {
+    width: 30%; }
+  .col.third + .col.third {
+    margin-left: 5%; }
 
 code:not(.inline) {
   width: 100%; }

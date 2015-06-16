@@ -45,7 +45,7 @@ applause.controller('DeckCtrl', function($scope, Appdata, $localStorage, $locati
 
   $scope.$parent.keyup = function(keyEvent) {
     switch(keyEvent.keyCode) {
-      case 13:
+      case 27:
         $scope.showGoTo = !$scope.showGoTo;
         break;
       case 37:

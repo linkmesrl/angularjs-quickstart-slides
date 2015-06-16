@@ -49,6 +49,14 @@ img.round{
     &.half + &.half{
         margin-left: 10%;
     }
+
+    &.third{
+        width: 30%;
+    }
+
+    &.third + &.third{
+        margin-left: 5%;
+    }
 }
 
 code:not(.inline) {
