@@ -1313,7 +1313,7 @@ Age &lt;input type="text" ng-model="query.age">
           </code>
         </div>
         <div step="3" style="margin-top: 40px;">
-          <h4>Script loading</h4>
+          <h4>Script loading order</h4>
           <code prism class="language-markup">
             &lt;script src="vendor/angular/angular.min.js">&lt;/script>
             &lt;script src="vendor/angular-route/angular-route.min.js">&lt;/script>
@@ -1431,9 +1431,245 @@ Age &lt;input type="text" ng-model="query.age">
 
       <slide>
         <h2>Reuse pieces with <code class="inline">ng-include</code></h2>
-        <code prism class="language-markup" style="margin-top: 50px">
+        <code prism class="language-markup" style="margin-top: 200px">
   &lt;ng-include src="'path/to/template.html'">&lt;/ng-include>
         </code>
+      </slide>
+
+      <slide steps="5">
+        <h2>Use as route view</h2>
+        <div class="col half" step="1">
+          <h3 style="margin-top: 0px; margin-bottom: 10px">An <code class="inline">html</code> template</h3>
+        </div>
+        <div class="col half" step="2">
+          <h3 style="margin-top: 0px; margin-bottom: 10px"><code class="inline">ng-view</code> directive</h3>
+        </div>
+        <div step="3">
+          <code prism class="language-markup" style="margin-top: 80px">
+  &lt;div ng-view>&lt;/div>
+          </code>
+        </div>
+        <div step="4">
+          <h3><code class="inline">ng-view</code> load the template inside the provided container and bind the specified controller</h3>
+        </div>
+        <div step="5">
+          <code prims class="language-javascript">
+  when('/about', {
+    templateUrl: 'views/about.html',
+    controller: 'aboutCtrl'
+  }).
+          </code>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>Notes on Route Changes</h2>
+        <div step="1" style="margin-top: 120px;">
+          <h3>Route changes does not reload the page</h3>
+        </div>
+        <div step="2">
+          <h3>Everytime a route is loaded, the associated controller is executed</h3>
+        </div>
+        <div step="3">
+          <h3>Route changes emit events</h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <h3>Definire due rotte per la nostra applicazione: <br> <code class="inline">/</code> e <code class="inline">/about</code></h3>
+        <h3>Spostare <code class="inline">listCtrl</code> in un template</h3>
+        <h3>Creare un controller per la pagina <code class="inline">about</code></h3>
+        <h3>
+          Documentation
+          <a href="http://goo.gl/DGi6tc" target="_blank">https://docs.angularjs.org/api/ngRoute</a>
+        </h3>
+      </slide>
+
+      <slide steps="1">
+        <h1>Do not reinvent the wheel!</h1>
+        <div step="1" style="margin-top: 200px;">
+          <h2>Import an open source module</h2>
+        </div>
+      </slide>
+
+      <slide bg-img="route2.png" steps="1">
+        <div step="1">
+          <h3 style="margin-top: 560px">
+            <a href="http://angular-google-maps.org/" target="_blank">angular-google-maps.org</a>
+          </h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <h3 style="margin-top: 150px;">Insert a map in the about view</h3>
+        <h3>Create a marker that points to Login</h3>
+        <h4>Latitude: 45.506639, Logngitude: 9.228062</h4>
+      </slide>
+
+      <slide>
+        <h1 style="width: 80%" class="abs-center">Practical Advice for the real world</h1>
+      </slide>
+
+      <slide steps="3">
+        <h2>Appiclation Structure</h2>
+        <h3 style="margin-bottom: 0px">Small to medium apps</h3>
+        <div class="col half">
+          <code prism class="language-markup">
+  ├── app
+  │    ├── bower_components
+  │   ├── images
+  │   ├── scripts
+  │   │   ├── controllers
+  │   │   ├── directives
+  │   │   ├── services
+  │   │   └── app.js
+  │   ├── styles
+  │   ├── views
+  │   └── index.html
+  ├── node_modules
+  └── test
+          </code>
+        </div>
+        <div class="col half">
+          <div step="1">
+            <h4 style="margin-top: 100px">github.com/yeoman/generator-angular</h4>
+          </div>
+          <div class="col half" step="2">
+            <img src="assets/theme/images/yeoman.png" height="210" width="158" alt="">
+          </div>
+          <div class="col half" step="3">
+            <img src="assets/theme/images/grunt.png" height="210" width="144" alt="">
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>Appiclation Structure</h2>
+        <h3 style="margin-bottom: 0px; margin-top: 10px">Medium to large apps</h3>
+        <div class="col half">
+          <code prism class="language-markup">
+  ├── bower_components
+  ├── docs
+  ├── e2e
+  ├── gulp
+  ├── node_modules
+  └── src
+      ├── app
+      │   ├── modules
+      │   │   └── myModule
+      │   │       ├── directives
+      │   │       ├── service
+      │   │       ├── views
+      │   │       └── myModule.js
+      │   └── main.js
+      └── index.html 
+  
+          </code>
+        </div>
+        <div class="col half">
+          <div step="1">
+            <h4 style="margin-top: 120px">github.com/Swiip/generator-gulp-angular</h4>
+          </div>
+          <div class="col half" step="2">
+            <img src="assets/theme/images/yeoman.png" height="210" width="158" alt="">
+          </div>
+          <div class="col half" step="3">
+            <img src="assets/theme/images/gulp.png" height="210" width="144" alt="">
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h1 style="width: 80%">
+          <h1 class="abs-center">Automate as much as possible</h1>
+        </h1>
+      </slide>
+
+      <slide steps="5">
+        <h2>During development</h2>
+        <div step="1">
+          <h3>Watch Files</h3>
+        </div>
+        <div step="2">
+          <h3>Live Reload</h3>
+        </div>
+        <div step="3">
+          <h3>Compile SASS</h3>
+        </div>
+        <div step="4">
+          <h3>Transpile ES6</h3>
+        </div>
+        <div step="5">
+          <h3>Lint Code</h3>
+        </div>
+      </slide>
+
+      <slide steps="6">
+        <h2>Automate the Build process</h2>
+        <div step="1">
+          <h3>Autoprefix Css</h3>
+        </div>
+        <div step="2">
+          <h3>Concat & Minify Css</h3>
+        </div>
+        <div step="3">
+          <h3>Concat & Minify Js</h3>
+        </div>
+        <div step="4">
+          <h3>Minify Html</h3>
+        </div>
+        <div step="5">
+          <h3>Run automatic test</h3>
+        </div>
+        <div step="6">
+          <h3><i>Deploy</i></h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Continue to study</h2>
+        <div>
+          <h3>https://scotch.io/</h3>
+        </div>
+        <div>
+          <h3>https://egghead.io/</h3>
+        </div>
+        <div>
+          <h3>http://code.tutsplus.com/categories/angularjs</h3>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>Use open source modules</h2>
+        <div step="1">
+          <div class="col half text-center">
+            <img style="margin-top: 100px;" src="assets/theme/images/github_star.png" height="49" width="381" alt="">
+          </div>
+          <div class="col half text-center">
+            <img src="assets/theme/images/npm_stat.png" height="243" width="365" alt="">
+          </div>
+        </div>
+        <div step="2">
+          <h3 style="margin-top: 290px;">If possible, contribute!</h3>
+        </div>
+        <div step="3">
+          <h2>Don't be shy! <br>Ask Questions!</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <h1 class="abs-center">Thanks</h1>
+        <div style="margin-top: 520px">
+          <h4>Let's keep in touch:</h4>
+          <div class="col half text-center">
+            @_teone
+          </div>
+          <div class="col half text-center">
+            @lambrojos
+          </div>
+        </div>
       </slide>
       <!-- =========== /SLIDE =========== -->
 
