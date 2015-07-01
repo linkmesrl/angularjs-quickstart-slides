@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Applause - HTML presentations powered by AngularJS</title>
+    <title>AngularJS QuickStart</title>
     <meta name="description" content="HTML presentations powered by Angular JS">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="assets/styles/applause.css">
@@ -31,6 +31,10 @@
 
         <slide>
           <h1 class="abs-center">AngularJs Quickstart</h1>
+        </slide>
+
+        <slide>
+          <h1 class="abs-center">Lesson 1</h1>
         </slide>
 
         <slide>
@@ -149,33 +153,33 @@
         <slide>
           <h3>Creare un file Html</h3>
           <code prism class="language-markup">
-            &lt;!DOCTYPE html&gt;
-            &lt;html lang="en"&gt;
-            &lt;head&gt;
-              &lt;meta charset="UTF-8"&gt;
-              &lt;title>AngularJs QuickStart&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-              
-            &lt;/body&gt;
-            &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>AngularJs QuickStart&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+  &lt;/html&gt;
           </code>
         </slide>
 
         <slide steps="1">
           <h3>Caricare Angular e inizializzare l'applicazione</h3>
           <code prism class="language-markup">
-            &lt;!DOCTYPE html&gt;
-            &lt;html lang="en" <strong>ng-app</strong>&gt;
-            &lt;head&gt;
-              &lt;meta charset="UTF-8"&gt;
-              &lt;title>AngularJs QuickStart&lt;/title&gt;
-              <strong>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"&gt;&lt;/script&gt;</strong>
-            &lt;/head&gt;
-            &lt;body&gt;
-              
-            &lt;/body&gt;
-            &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en" <strong>ng-app</strong>&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>AngularJs QuickStart&lt;/title&gt;
+    <strong>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"&gt;&lt;/script&gt;</strong>
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+  &lt;/html&gt;
           </code>
           <div step="1">
             <h2>Fatto!</h2>
@@ -191,8 +195,8 @@
           <div step="1" style="margin-top: 100px">
               <div class="ng-non-bindable">
             <code prism class="language-markup">
-                &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
-                &lt;div&gt;Hi &lbrace;{ name }}!&lt;/div&gt;
+  &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
+  &lt;div&gt;Hi &lbrace;{ name }}!&lt;/div&gt;
             </code>
               </div>
 
@@ -224,9 +228,9 @@
         <div step="1" style="margin-top: 50px">
             <div class="ng-non-bindable">
           <code prism class="language-markup">
-              &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
-              &lt;div&gt;Hi {{ name }}!&lt;/div&gt;
-              &lt;div&gt;How are you {{ name }}?&lt;/div&gt;
+  &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
+  &lt;div&gt;Hi {{ name }}!&lt;/div&gt;
+  &lt;div&gt;How are you {{ name }}?&lt;/div&gt;
           </code>
             </div>
 
@@ -245,10 +249,10 @@
         <div step="1" style="margin-top: 50px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="number" ng-model="a"/&gt;
-              &lt;h4&gt;+&lt;/h4&gt;
-              &lt;input type="number" ng-model="b"/&gt;
-              &lt;h3&gt;Result is {{a+b}}!&lt;/h3&gt;    
+  &lt;input type="number" ng-model="a"/&gt;
+  &lt;h4&gt;+&lt;/h4&gt;
+  &lt;input type="number" ng-model="b"/&gt;
+  &lt;h3&gt;Result is {{a+b}}!&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -264,8 +268,8 @@
         <div step="1">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;button ng-click="value = 3" ng-init="value = 1"&gt;Set Value to 3&lt;/button&gt;
-              &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
+  &lt;button ng-click="value = 3" ng-init="value = 1"&gt;Set Value to 3&lt;/button&gt;
+  &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -281,8 +285,8 @@
         <div step="1">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
-              &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
+  &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
+  &lt;h3&gt;Value is: {{value}}&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -300,10 +304,10 @@
         <div step="1">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
-              &lt;h4&gt;Value is: {{value}}&lt;/h4&gt;
-              &lt;h3 ng-hide="value > 3"&gt;I will be hidden if value is greater than 3&lt;/h3&gt;
-              &lt;h3 ng-show="value &gt; 3"&gt;I will be visible if value is greater than 3&lt;/h3&gt;    
+  &lt;button ng-click="value = value + 1" ng-init="value = 1"&gt;Increase Value&lt;/button&gt;
+  &lt;h4&gt;Value is: {{value}}&lt;/h4&gt;
+  &lt;h3 ng-hide="value > 3"&gt;I will be hidden if value is greater than 3&lt;/h3&gt;
+  &lt;h3 ng-show="value &gt; 3"&gt;I will be visible if value is greater than 3&lt;/h3&gt;    
             </code>
           </div>
         </div>
@@ -318,12 +322,12 @@
           <button ng-click="array.push(name)" ng-init="array = []">Insert Name</button>
           <h3 style="margin-top: 10px">Value is: {{array}}</h3>
         </div>
-        <div step="1">
+        <div step="1" style="margin-top: 20px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="text" ng-model="name"/&gt;
-              &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
-              &lt;h3 style="margin-top: 10px"&gt;Value is: {{array}}&lt;/h3&gt;   
+  &lt;input type="text" ng-model="name"/&gt;
+  &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
+  &lt;h3 style="margin-top: 10px"&gt;Value is: {{array}}&lt;/h3&gt;   
             </code>
           </div>
         </div>
@@ -338,12 +342,12 @@
           <button ng-click="array.push(name)" ng-init="array = []">Insert Name</button>
           <h2 ng-repeat="name in array">{{name}}</h2>
         </div>
-        <div step="1">
+        <div step="1" style="margin-top: 20px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="text" ng-model="name"/&gt;
-              &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
-              &lt;h2 ng-repeat="name in array"&gt;{{name}}&lt;/h2&gt;
+  &lt;input type="text" ng-model="name"/&gt;
+  &lt;button ng-click="array.push(name)" ng-init="array = []"&gt;Insert Name&lt;/button&gt;
+  &lt;h2 ng-repeat="name in array"&gt;{{name}}&lt;/h2&gt;
             </code>
           </div>
         </div>
@@ -364,10 +368,10 @@
         <div step="1" style="margin-top: 60px">
           <div class="ng-non-bindable">
             <code prism class="language-markup">
-              &lt;input type="text" ng-model="name"/&gt;
-              &lt;button ng-click="array.push(name)" ng-init="array = [...]"&gt;Insert Name&lt;/button&gt;
-              &lt;input type="text" ng-model="query"/&gt;
-              &lt;h2 ng-repeat="name in array | filter:query"&gt;{{name}}&lt;/h2&gt;
+  &lt;input type="text" ng-model="name"/&gt;
+  &lt;button ng-click="array.push(name)" ng-init="array = [...]"&gt;Insert Name&lt;/button&gt;
+  &lt;input type="text" ng-model="query"/&gt;
+  &lt;h2 ng-repeat="name in array | filter:query"&gt;{{name}}&lt;/h2&gt;
             </code>
           </div>
         </div>
@@ -388,7 +392,7 @@
               <input type="number" ng-model="participant.age">
             </td>
             <td>
-              <button ng-click="list.push(participant)" ng-init="list = [
+              <button ng-click="list.push({name: participant.name, age: participant.age})" ng-init="list = [
                 {name: 'Matteo', age: '29'},
                 {name: 'Giovanni', age: '29'},
                 {name: 'Leonida', age: '35'},
@@ -419,32 +423,1251 @@
         <h2>Data-Binding on steroids</h2>
         <div class="ng-non-bindable">
           <code prism class="language-markup">
-            &lt;!-- Insert -->
-            &lt;!-- Participant = {name: 'Matteo', age: '29'} -->      
-            &lt;input type="text" ng-model="participant.name"/>
-            &lt;input type="number" ng-model="participant.age">
-            &lt;button ng-click="list.push(participant)" ng-init="list = []">Insert&lt;/button>
+&lt;!-- Insert -->
+&lt;!-- Participant = {name: 'Matteo', age: '29'} -->      
+&lt;input type="text" ng-model="participant.name"/>
+&lt;input type="number" ng-model="participant.age">
+&lt;button ng-click="list.push({name: participant.name, age: participant.age})" 
+ng-init="list = []">Insert&lt;/button>
 
-            &lt;!-- Filter -->
-            Name &lt;input type="text" ng-model="query.name">
-            Age &lt;input type="text" ng-model="query.age">
+&lt;!-- Filter -->
+Name &lt;input type="text" ng-model="query.name">
+Age &lt;input type="text" ng-model="query.age">
 
-            &lt;!-- Repeat -->
-            &lt;div ng-repeat="person in list | filter:query">
-            &lt;span>{{person.name}}&lt;/span>
-            &lt;span>{{person.age}}&lt;/span>
-                
+&lt;!-- Repeat -->
+&lt;div ng-repeat="person in list | filter:query">
+&lt;span>{{person.name}}&lt;/span>
+&lt;span>{{person.age}}&lt;/span>
+          </code>
+          <note>Objects and arrays are pushed by reference. Built-in types like numbers are pushed as a copy.</note>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <h3>Creare una pagina web in cui un utente possa inserire dei prodotti e filtrarli per nome</h3>
+        <p>I prodotti devono essere salvati in un array <code class="inline">products</code></p>
+        <p>
+          Ognuno dei prodotti deve avere queste caratteristiche:
+          <code class="inline">{category: String, name: String, quantity: Number}</code>
+        </p>
+        <p>
+          Altri binding utili: <code class="inline">ng-submit</code> <code class="inline">ng-options (hard)</code>
+        </p>
+        <h3>Qui è disponibile un template Html vuoto</h3>
+        <h3>
+          <a href="http://goo.gl/DGi6tc" target="_blank">goo.gl/DGi6tc</a>
+        </h3>
+      </slide>
+
+      <slide steps="2">
+        <h2>Homeworks!</h2>
+        <div step="1" style="margin-top: 200px">
+          <h3>Install <a href="https://nodejs.org/">NodeJs</a></h3>
+        </div>
+        <div step="2">
+          <h4>or a webserver</h4>
+        </div>
+      </slide>
+
+      <slide steps="2">
+        <h2>Bower</h2>
+        <h3>
+          <a href="http://bower.io">http://bower.io</a>
+        </h3>
+        <img src="assets/theme/images/bower.png" height="210" width="165" style="margin: 0 auto; display: block">
+        <div step="1">
+          <h3>Package manager</h3>
+          <div step="2">
+            <h4>Install dependencies</h4>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>Grunt | Gulp</h2>
+        <div class="col half">
+          <h3>
+            <a href="http://gruntjs.com">http://gruntjs.com</a>
+          </h3>
+          <img src="assets/theme/images/grunt.png" height="210" width="144" style="margin: 0 auto; display: block">
+        </div>
+        <div class="col half">
+          <h3>
+            <a href="http://gulpjs.com">http://gulpjs.com</a>
+          </h3>
+          <img src="assets/theme/images/gulp.png" height="210" width="94" style="margin: 0 auto; display: block">
+        </div>
+        <div step="1">
+          <h3>Task runner</h3>
+          <div step="2" class="col third">
+            <h4>Compile Sass/Scss/Less/...</h4>
+          </div>
+          <div step="3" class="col third">
+            <h4>Build your code</h4>
+          </div>
+          <div step="4" class="col third">
+            <h4>Run tests and lint errors</h4>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="2">
+        <h2>Yeoman</h2>
+        <h3>
+          <a href="http://yeoman.io">http://yeoman.io</a>
+        </h3>
+        <img src="assets/theme/images/yeoman.png" height="210" width="158" style="margin: 0 auto; display: block">
+        <div step="1">
+          <h3>Scaffholding Tool</h3>
+          <div step="2">
+            <h4>Create your base application</h4>
+          </div>
+        </div>
+      </slide>
+
+<!-- ================================================================== LESSON 2 ================================================================== -->
+      
+      <slide>
+        <h1 class="abs-center">Lesson 2</h1>
+      </slide>
+
+      <slide steps="5">
+        <h2>Resume</h2>
+        <div step="1">
+          <h3>Data Binging</h3>
+        </div>
+        <div step="2">
+          <h3><code class="inline">ng-model</code></h3>
+        </div>
+        <div step="3">
+          <h3><code class="inline">ng-click</code></h3>
+        </div>
+        <div step="4">
+          <h3><code class="inline">ng-repeat</code></h3>
+        </div>
+        <div step="5">
+          <h3><code class="inline">ng-submit</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>Resume</h2>
+        <div style="width: 100%">
+          <div step="1" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/grunt.png" height="210" width="144">
+          </div>
+          <div step="2" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/gulp.png" height="210" width="94" alt="">
+          </div>
+        </div>
+        <div style="width: 100%">
+          <div step="3" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/bower.png" height="210" width="165">
+          </div>
+          <div step="4" class="col half" style="text-align: center;">
+            <img src="assets/theme/images/yeoman.png" height="210" width="158" alt="">
+          </div>
+        </div>
+      </slide>
+      
+      <slide>
+        <h2 class="abs-center">It's time to write in Javascript!</h2>
+      </slide>
+
+      <slide steps="1">
+        <img style="display: block; margin: 0 auto;" src="assets/theme/images/stop.png" height="200" width="200" alt="">
+        <div step="1" style="margin-top: 150px;">
+          <h2>Before Coding, Debug is needed!</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Our old friend <code class="inline">console.log(myVar);</code></h2>
+        <code prims class="language-javascript" style="margin-top: 60px;">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope){
+            $scope.myFunction = function(a){
+              console.log(a);
+              // do stuff;
+              return b;
+            }
+          });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Chrome Dev Tools</h2>
+        <img src="assets/theme/images/devtools.png" height="404" width="970" alt="" style="margin-top: 40px">
+      </slide>
+
+      <slide>
+        <h2> AngularJs Application Structure</h2>
+        <img src="assets/theme/images/app_structure_01.png" height="358" width="562" alt="" class="img-responsive abs-center">
+      </slide>
+
+      <slide>
+        <h2> AngularJs Application Structure</h2>
+        <h3><code class="inline">main.js</code></h3>
+        <code prims class="language-javascript">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope){
+            // my code
+          });
+        </code>
+        <code prism class="language-markup">
+  &lt;section ng-controller="listCtrl">
+  &lt;/section>
+        </code>
+      </slide>
+
+      <slide steps="3">
+        <h2>What is a <code class="inline">Controller</code>?</h2>
+        <div class="abs-center">
+          <div step="1">
+            <h3>A Js function that react to user input</h3>
+          </div>
+          <div step="2">
+            <h3>The place in wich you define your Business Logic</h3>
+          </div>
+          <div step="3">
+            <h3>The place in wich set up our data</h3>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>What is <code class="inline">$scope</code>?</h2>
+        <div step="1">
+          <h3>It is an execution context for expressions.</h3>
+        </div>
+        <div step="2">
+          <h3>Scopes are arranged in hierarchical structure which mimic the DOM structure of the application.</h3>
+        </div>
+        <div step="3">
+          <h2>Scopes are the glue between application controller and the view.</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>How to bind <code class="inline">controller</code> to Html</h2>
+        <img class="abs-center"src="assets/theme/images/app-demo-1.png">
+      </slide>
+
+      <slide>
+      <h2>How to bind <code class="inline">controller</code> to Html</h2>
+        <code prism class="language-markup" style="margin-top: 100px;">
+  &lt;section ng-controller="listCtrl" class="row">
+    &lt;article class="col-sm-9">
+      // Form and List Html
+    &lt;/article>
+    &lt;article ng-controller="cartCtrl" class="col-sm-3">
+      // Cart Html
+    &lt;/article>
+  &lt;/section>
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Attach a property to the <code class="inline">$scope</code></h2>
+        <code prism class="language-javascript">
+  angular.module('groceryStore',[])
+  .controller('listCtrl', function($scope, $http){
+
+      $scope.categories = ['Fruits', 'Vegetables'];
+
+      $scope.products = [
+        {
+            category : "Fruits",
+            name : "Apple",
+            quantity : "12"
+        },
+        {
+            ...
+        }
+      ];
+  });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Read a property from the <code class="inline">$scope</code></h2>
+        <div class="ng-non-bindable" style="margin-top: 125px;">
+          <code prism class="language-markup">
+  &lt;div class="well" ng-repeat="product in products | filter:query">
+  &lt;div class="row">
+      &lt;div class="col-sm-3">{{product.category}}&lt;/div>
+      &lt;div class="col-sm-3">{{product.name}}&lt;/div>
+      &lt;div class="col-sm-3">{{product.quantity}}&lt;/div>
+      &lt;/div>
+  &lt;/div>
           </code>
         </div>
       </slide>
 
       <slide>
-        <h2>Exrcise</h2>
-        <h3>Creare una pagina web in cui un utente possa inserire dei prodotti e filtrarli per nome</h3>
-        <p>I prodotti devono essere salvati in un array <code class="inline">products</code></p>
-        <p>Ognuno dei prodotti deve avere queste caratteristiche:</p>
-        <p><code class="inline">{category: String, name: String, available: Number}</code></p>
-        <h3>Qui è disponibile un template Html vuoto</h3>
+        <h2>Attach methods to the <code class="inline">$scope</code></h2>
+        <code prism class="language-javascript" style="margin-top: 50px;">
+  angular.module('groceryStore',[])
+  .controller('listCtrl', function($scope){
+
+      $scope.addProduct = function(){
+          $scope.products.push($scope.newProduct);
+          $scope.newProduct = null;
+      };
+
+      $scope.addToCart = function(product){
+          $scope.cart.push(product);
+      };
+  });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Call a method from the <code class="inline">$scope</code></h2>
+        <code prism class="language-markup">
+  &lt;form ng-submit="addProduct()"> ... &lt;/form>
+        </code>
+        <code prism class="language-markup">
+  &lt;div class="well" ng-repeat="product in products | filter:query">
+      &lt;div class="row">
+          &lt;div class="col-sm-3">{{product.category}}&lt;/div>
+          &lt;div class="col-sm-3">{{product.name}}&lt;/div>
+          &lt;div class="col-sm-3">{{product.quantity}}&lt;/div>
+          &lt;div class="col-sm-3">
+              &lt;a href="" ng-click="addToCart(product)" class="btn btn-primary">
+                  Buy
+              &lt;/a>
+          &lt;/div>
+      &lt;/div>
+  &lt;/div>
+          </code>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <div class="abs-center">
+          <h3>Define a <code class="inline">listCtrl</code></h3>
+          <h3>Define a method to create a product (<code class="inline">.push</code>)</h3>
+        </div>
+      </slide>
+
+      <slide steps="2">
+        <h2>Controller Inheritance</h2>
+        <div step="1">
+          <h3>Scopes are arranged in hierarchical structure which mimic the DOM structure of the application.</h3>
+        </div>
+        <div step="2">
+          <h2>A child controller can inherit from a parent controller</h2>
+        </div>
+      </slide>
+      
+      <slide>
+        <img class="abs-center"src="assets/theme/images/app-demo-2.png" alt="">
+      </slide>
+
+      <slide>
+        <h2>Controller Inheritance</h2>
+        <code prims class="language-javascript" style="margin-top: 50px">
+  angular.module('groceryStore',[])
+  .controller('parentCtrl', function($scope){
+
+    $scope.parentMethod = function(){/*...*/};
+
+    $scope.parentValue = "Matteo";
+  })
+  .controller('childCtrl', function($scope){
+    
+    $scope.parentMethod(); //it'll work
+    
+    // and I can read parentValue
+  });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>Controller Inheritance</h2>
+        <div class="ng-non-bindable" style="margin-top: 125px;">
+          <code prism class="language-markup">
+  &lt;div ng-controller="parentCtrl">
+      &lt;!-- Some binding -->
+      {{parentValue}} &lt;!-- Matteo -->
+      &lt;div ng-controller="childCtrl">
+          &lt;!-- Some other binding -->
+          {{parentValue}} &lt;!-- Matteo -->
+          &lt;a ng-click="parentMethod()"></a> &lt;!-- it'll work -->
+      &lt;/div>
+  &lt;/div>
+          </code>
+        </div>
+      </slide>
+
+      <slide steps="1">
+        <h2>Pay Attention!</h2>
+        <div step="1" class="abs-center">
+          <h1>Works only one way!</h1>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Pay Attention!</h2>
+        <div class="col half">
+          <code prims class="language-javascript" style="margin-top: 50px">
+  angular.module('groceryStore',[])
+  .controller('parentCtrl', 
+    function($scope){
+
+      $scope.parentValue = "Matteo";
+  })
+  .controller('childCtrl', 
+    function($scope){
+    
+      $scope.parentValue = "Giovanni";
+  });
+          </code>
+        </div>
+        <div class="col half">
+          <div class="ng-non-bindable" style="margin-top: 125px;">
+            <code prism class="language-markup">
+&lt;div ng-controller="parentCtrl">
+  &lt;!-- Some binding -->
+  {{parentValue}} &lt;!-- Matteo -->
+  &lt;div ng-controller="childCtrl">
+    &lt;!-- Some other binding -->
+    {{parentValue}} &lt;!-- Giovanni -->
+  &lt;/div>
+&lt;/div>
+            </code>
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <div class="abs-center">
+          <h3>Define a child <code class="inline">cartCtrl</code></h3>
+          <h3>Define a method to add a product to the cart <code class="inline">$scope.cart</code></h3>
+          <h3>Repeat the cart in the <code class="inline">cartCtrl</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>Request data from a Server </h2>
+        <div step="1">
+          <h3>Angular play nice with REST API</h3>
+        </div>
+        <div step="2">
+          <h3>Respond in JSON</h3>
+        </div>
+        <div step="3">
+          <h3>Use Http Statuses</h3>
+        </div>
+        <div step="4" style="margin-top: 120px">
+          <h2>JSON does NOT mean REST</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>The core <code class="inline">http</code> service</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+  var req = {
+    method: 'POST',
+    url: 'http://example.com',
+    data: { test: 'test' }
+  };
+
+  $http(req)
+  .success(function(res){...})
+  .error(function(err){...});
+        </code>
+      </slide>
+
+      <slide steps="2">
+        <h2>Shortcut Methods</h2>
+        <div step="1">
+          <code prism class="language-javascript" style="margin-top: 50px">
+  $http.get('http://example.com')
+  .success(function(res){...})
+  .error(function(err){...});
+          </code>
+        </div>
+        <div step="2">
+          <code prism class="language-javascript" style="margin-top: 100px">
+  var data = {firstName: 'Matteo', occupation: 'Frontend Developer'};
+
+  $http.post('http://example.com', data)
+  .success(function(res){...})
+  .error(function(err){...});
+          </code>
+        </div>
+      </slide>
+
+      <slide steps="2">
+        <h2>Response Methods</h2>
+        <div step="1">
+          <h3><code class="inline">.success</code></h3>
+          <code prism class="language-javascript">
+  .success(function(res, status, headers, config){
+    // executed for 200 and 300 statuses
+  })
+          </code>
+        </div>
+        <div step="2">
+          <h3><code class="inline">.error</code></h3>
+          <code prism class="language-javascript">
+  .error(function(res, status, headers, config){
+    // executed for 400 and 500 statuses
+  })
+          </code>
+        </div>
+      </slide>
+
+      <slide>
+        <h2><code class="inline">http</code> return a promise</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+  var data = {firstName: 'Matteo', occupation: 'Frontend Developer'};
+
+  $http.post('http://example.com', data)
+  .then(function(res){
+    // this is the success case
+  })
+  .catch(function(err){
+    // this is the error case
+  });
+        </code>
+      </slide>
+
+      <slide>
+        <h2>My First Request</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+  angular.module('groceryStore',[])
+  .controller('listCtrl', function($scope, $http){
+
+    // Retrieve data form the backend
+    $http.get('../mocks/list.json')
+    .success(function(list){
+        $scope.products = list;
+    })
+    .error(function(err){
+        $scope.error = err.data.message;
+    });
+  });
+        </code>
+        <note>REMEBER THE INJECT!</note>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <div class="abs-center">
+          <h3>Load list data with <code class="inline">$http</code> from <code class="inline">mocks/list.json</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="5">
+        <h2>REST Resources</h2>
+        <div step="1">
+          <h3><code class="inline">/users [GET]</code> Query the list of users</h3>
+        </div>
+        <div step="2">
+          <h3><code class="inline">/users/1 [GET]</code> Get a single user</h3>
+        </div>
+        <div step="3">
+          <h3><code class="inline">/users [POST]</code> Create a user</h3>
+        </div>
+        <div step="4">
+          <h3><code class="inline">/users/1 [POST]</code> Update a user</h3>
+        </div>
+        <div step="5">
+          <h3><code class="inline">/users/1 [DELETE]</code> Delete a user</h3>
+        </div>
+        <note>Parlane solo se avanza del tempo</note>
+      </slide>
+
+      <slide>
+        <h2>Angular <code class="inline">$resource</code></h2>
+        <code prism class="language-javascript abs-center">
+  var User = $resource('/user/:userId', {userId:'@id'});
+        </code>
+      </slide>
+      <slide>
+        <h2>Query</h2>
+        <h3><code class="inline">/users [GET]</code> Query the list of users</h3>
+        <code prism class="language-javascript abs-center">
+  var users = User.query().then(successHandler, errorHandler);
+        </code>
+      </slide>
+      <slide>
+        <h2>Get</h2>
+        <h3><code class="inline">/users/1 [GET]</code> Get a single user</h3>
+        <code prism class="language-javascript abs-center">
+  var user = User.get({userId: 1}).then(successHandler, errorHandler);
+        </code>
+      </slide>
+      <slide>
+        <h2>Create</h2>
+        <h3><code class="inline">/users [POST]</code> Create a user</h3>
+        <code prism class="language-javascript abs-center">
+  var newUser = new User({name: 'Matteo'});
+  newUser.$save().then(successHandler, errorHandler);
+        </code>
+      </slide>
+      <slide>
+        <h2>Update</h2>
+        <h3><code class="inline">/users/1 [POST]</code> Update a user</h3>
+        <code prism class="language-javascript abs-center">
+  user.name = 'Giovanni';
+  user.$save();
+        </code>
+      </slide>
+      <slide>
+        <h2>Delete</h2>
+        <h3><code class="inline">/users/1 [DELETE]</code> Delete a user</h3>
+        <code prism class="language-javascript abs-center">
+  user.$remove();
+        </code>
+      </slide>
+
+<!-- ================================================================== LESSON 3 ================================================================== -->
+  
+      <slide>
+        <h1 class="abs-center">Lesson 3</h1>
+      </slide>
+
+      <slide steps="1">
+        <h2>Dependency Injection</h2>
+        <div step="1" class="abs-center">
+          <h3>Dependency Injection (DI) is a software design pattern that deals with how components get hold of their dependencies.</h3>
+        </div>
+        <note>Rende disponibili le dipendenze che mi servono</note>
+      </slide>
+
+      <slide steps="4">
+        <h2>Why should I inject?</h2>
+        <div step="1">
+          <h1 class="abs-center">To Reuse Code!</h1>
+        </div>
+        <div style="margin-top: 350px;">
+          <div step="2" class="col third text-center">
+            <h3>Remote Call</h3>
+          </div>
+          <div step="3" class="col third text-center">
+            <h3>Shared functionality</h3>
+          </div>
+          <div step="4" class="col third text-center">
+            <h3>Shared data</h3>
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>What can I inject?</h2>
+        <div step="1">
+          <h3><code class="inline">.service</code></h3>
+        </div>
+        <div step="2">
+          <h3><code class="inline">.directive</code></h3>
+        </div>
+        <div step="3">
+          <h3><code class="inline">.filter</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="6">
+        <h2>Where can I inject?</h2>
+        <div step="1">
+          <h3><code class="inline">.controller</code></h3>
+        </div>
+        <div step="2">
+          <h3><code class="inline">.service</code></h3>
+        </div>
+        <div step="3">
+          <h3><code class="inline">.directive</code></h3>
+        </div>
+        <div step="4">
+          <h3><code class="inline">.filter</code></h3>
+        </div>
+        <div step="5">
+          <h3><code class="inline">.run</code></h3>
+        </div>
+        <div step="6">
+          <h3><code class="inline">.config</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="1">
+        <h2>What Services Are?</h2>
+        <div step="1">
+          <h3 class="abs-center">A service is a function or an object and is used to share data and/or behavior.</h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>How to define a service?</h2>
+        <code prism class="language-javascript">
+          angular.module('groceryStore',[])
+          .service('myService', function(){
+
+            // store some data
+            this.myData = 'data';
+
+            // define a method
+            this.getData = function(){
+              return this.myData;
+            };
+          });
+        </code>
+        <note>Questo non è da fare! Usa .value</note>
+      </slide>
+
+      <slide steps="1">
+        <h2>How to use a service?</h2>
+        <code prism class="language-javascript" style="margin-top: 80px;">
+          angular.module('groceryStore',[])
+          .controller('myCtrl', function(myService){
+
+            $scope.data = myService.getData();
+
+          });
+        </code>
+        <div step="1" style="margin-top: 80px;">
+          <h2>Let's see an example!</h2>
+        </div>
+        <note>Questo non è da fare! Usa .value</note>
+      </slide>
+
+      <slide>
+        <h2>Remember the <code class="inline">$http</code> request?</h2>
+        <code prism class="language-javascript" style="margin-top: 100px">
+          $http.get('../mocks/list.json');
+          .success(function(list){
+              $scope.products = list;
+          })
+          .error(function(err){
+              throw err;
+          });
+        </code>
+        <note>Funzionava, perchè devo cambiarla?</note>
+      </slide>
+
+      <slide steps="2">
+        <h2>Let's move it into a <code class="inline">.service</code></h2>
+        <code prism class="language-javascript" style="margin-top: 50px">
+          angular.module('groceryStore',[])
+          .service('listService', function($http){
+            this.getList = function(){
+                return $http.get('../mocks/list.json');
+            }
+          });
+        </code>
+        <div>
+          <div step="1" class="col half">
+            <h3>I can use this method around my app</h3>
+          </div>
+          <div step="2" class="col half">
+            <h3>If the url change, I have to change it in one place only</h3>
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Use it in our <code class="inline">.controller</code></h2>
+        <code prism class="language-javascript" style="margin-top: 50px">
+          angular.module('groceryStore',[])
+          .controller('listCtrl', function($scope, listService){
+
+            // Retrieve data form the backend
+            listService.getList()
+            .success(function(list){
+                $scope.products = list;
+            })
+            .error(function(err){
+                throw err; // or better notify the user
+            });
+
+          });
+        </code>
+      </slide>
+      
+      <slide>
+        <h2>Exercise</h2>
+        <div class="abs-center">
+          <h3>Move the <code class="inline">$http</code> call in a <code class="inline">listService</code></h3>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>Dependency Injection Sintax</h2>
+        <div step="1">
+          <code prism class="language-javascript">
+            angular.module('groceryStore',[])
+            .service('listService', function($http){
+              // code
+            });
+          </code>
+        </div>
+        <div step="2">
+          <h3>This can lead to problem while building</h3>
+        </div>
+        <div step="3">
+          <h4>Take care and use ngAnnotate</h4>
+        </div>
+        <div step="4">
+          <code prism class="language-javascript">
+            angular.module('groceryStore',[])
+            .service('listService', ['$http', function($http){
+              // code
+            }]);
+          </code>
+        </div>
+      </slide>
+      
+      <slide>
+        <h2>Exercise</h2>
+        <h3>Separate <code class="inline">listCtrl</code> and <code class="inline">cartCtrl</code></h3>
+        <h3>Create a <code class="inline">cartService</code> to handle the cart with:</h3>
+        <h4><code class="inline">this.cart</code> to store the data</h4>
+        <h4><code class="inline">this.add(product)</code> to add a product</h4>
+        <h4><code class="inline">this.remove(id)</code> to remove a product</h4>
+        <h3><i>Optional</i> show the number if cart items in the header</h3>
+      </slide>
+
+      <!-- ================================================================== LESSON 4 ================================================================== -->
+
+      <slide>
+        <h1 class="abs-center">Lesson 4</h1>
+      </slide>
+      
+      <slide steps="4">
+        <h2>Resume</h2>
+        <div step="1">
+          <h3>Dependency Injection</h3>
+        </div>
+        <div step="2">
+          <h3><code class="inline">.service</code> definition</h3>
+        </div>
+        <div step="3">
+          <h3>Injecting a service</h3>
+        </div>
+        <div step="4">
+          <h3>Sharing datas and methods</h3>
+        </div>
+      </slide>
+
+      <slide steps="2">
+        <h2>Routes Handling</h2>
+        <div step="1">
+          <h1 class="abs-center">What a Route is?</h1>
+        </div>
+        <div step="2" style="margin-top: 350px;">
+          <h3>An Url matching the application state</h3>
+        </div>
+      </slide>
+
+      <slide steps="1">
+        <h2>In a more practical way:</h2>
+        <div class="col half text-center" style="margin-top: 80px">
+          <code class="inline">http://localhost:300/#</code>
+
+          <img src="assets/theme/images/route1.png">
+        </div>
+        <div class="col half text-center" style="margin-top: 80px">
+          <code class="inline">http://localhost:300/#/about</code>
+
+          <img src="assets/theme/images/route2.png">
+        </div>
+        <div step="1">
+          <h3 style="margin-top: 410px">A route is a page of our application</h3>
+        </div>
+      </slide>
+
+      <slide steps="4">
+        <h2>How do we define Routes?</h2>
+        <div step="1">
+          <h3>We need an external Angular module called <br> <code class="inline">ngRoute</code></h3>
+        </div>
+        <div step="2">
+          <h3>We should configure some routes</h3>
+        </div>
+        <div step="3">
+          <h3>We should define some templates (views)</h3>
+        </div>
+        <div step="4">
+          <h3>We should define a position in wich load the template</h3>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>Import an external module</h2>
+        <div step="1" style="margin-top: 40px;">
+          <h4>Module definition</h4>
+          <code prism class="language-javascript">
+  angular.module('groceryStore',[])
+          </code>
+        </div>
+        <div step="2" style="margin-top: 40px;">
+          <h4>Module definition with dependencies</h4>
+          <code prism class="language-javascript">
+  angular.module('groceryStore',['ngRoute'])
+          </code>
+        </div>
+        <div step="3" style="margin-top: 40px;">
+          <h4>Script loading order</h4>
+          <code prism class="language-markup">
+            &lt;script src="vendor/angular/angular.min.js">&lt;/script>
+            &lt;script src="vendor/angular-route/angular-route.min.js">&lt;/script>
+            &lt;script src="js/main.js">&lt;/script>
+          </code>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Define application routes</h2>
+        <code prism class="language-javascript">
+  angular.module('groceryStore',['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+      $routeProvider.
+      when('/', {
+        templateUrl: 'views/list.html',
+        controller: 'listCtrl'
+      }).
+      when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'aboutCtrl'
+      }).
+      otherwise({
+        redirectTo: '/'
+      });
+  }]);
+        </code>
+      </slide>
+
+      <slide>
+        <h2>About routes: Handling Parameter</h2>
+        <code prism class="language-javascript">
+  angular.module('groceryStore',['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+      $routeProvider
+      .when('/myRoute/:id', {
+        // ....
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  }])
+  .controller('myCtrl', function($scope, $routeParams){
+    console.log($routeParams.id);
+  });
+        </code>
+        <p class="text-center">When visiting <code class="inline">#/myRoute/12</code> will log <code class="inline">12</code></p>
+        <p class="text-center">When visiting <code class="inline">#/myRoute</code> will not match the route</p>
+      </slide>
+
+      <slide>
+        <h2>About routes: Optional Parameter</h2>
+        <code prism class="language-javascript">
+  angular.module('groceryStore',['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+      $routeProvider
+      .when('/myRoute/:name?', {
+        // ....
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  }])
+  .controller('myCtrl', function($scope, $routeParams){
+    console.log($routeParams.name);
+  });
+        </code>
+        <p class="text-center">When visiting <code class="inline">#/myRoute/matteo</code> will log <code class="inline">matteo</code></p>
+        <p class="text-center">When visiting <code class="inline">#/myRoute</code> will log <code class="inline">undefined</code></p>
+      </slide>
+
+      <slide>
+        <h2>About routes: Query String</h2>
+        <code prism class="language-javascript">
+  angular.module('groceryStore',['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+      $routeProvider
+      .when('/myRoute', {
+        // ....
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  }])
+  .controller('myCtrl', function($scope, $location){
+    console.log($location.search());
+  });
+        </code>
+        <p class="text-center">When visiting <code class="inline">#/myRoute?name=matteo&age=29</code> will log <code class="inline">{name: matteo, age: 29}</code></p>
+        <p class="text-center">When visiting <code class="inline">#/myRoute</code> will log <code class="inline">undefined</code></p>
+      </slide>
+
+      <slide steps="5">
+        <h2>Create a template</h2>
+        <div step="1">
+          <h3>A template is an Html block</h3>
+        </div>
+        <div step="2">
+          <h4>such as</h4>
+          <code prism class="language-markup">
+    &lt;input type="text" ng-model="name" placeholder="Insert your name!"/&gt;
+    &lt;div&gt;Hi &lbrace;{ name }}!&lt;/div&gt;
+          </code>
+        </div>
+        <div step="3">
+          <h3>Template can be used for:</h3>
+        </div>
+        <div class="col half text-center" step="4">
+          <h3>Reuse pieces of Html</h3>
+        </div>
+        <div class="col half text-center" step="5">
+          <h3>Render Routes</h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Reuse pieces with <code class="inline">ng-include</code></h2>
+        <code prism class="language-markup" style="margin-top: 200px">
+  &lt;ng-include src="'path/to/template.html'">&lt;/ng-include>
+        </code>
+      </slide>
+
+      <slide steps="5">
+        <h2>Use as route view</h2>
+        <div class="col half" step="1">
+          <h3 style="margin-top: 0px; margin-bottom: 10px">An <code class="inline">html</code> template</h3>
+        </div>
+        <div class="col half" step="2">
+          <h3 style="margin-top: 0px; margin-bottom: 10px"><code class="inline">ng-view</code> directive</h3>
+        </div>
+        <div step="3">
+          <code prism class="language-markup" style="margin-top: 80px">
+  &lt;div ng-view>&lt;/div>
+          </code>
+        </div>
+        <div step="4">
+          <h3><code class="inline">ng-view</code> load the template inside the provided container and bind the specified controller</h3>
+        </div>
+        <div step="5">
+          <code prims class="language-javascript">
+  when('/about', {
+    templateUrl: 'views/about.html',
+    controller: 'aboutCtrl'
+  }).
+          </code>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>Notes on Route Changes</h2>
+        <div step="1" style="margin-top: 120px;">
+          <h3>Route changes does not reload the page</h3>
+        </div>
+        <div step="2">
+          <h3>Everytime a route is loaded, the associated controller is executed</h3>
+        </div>
+        <div step="3">
+          <h3>Route changes emit events</h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <h3>Definire due rotte per la nostra applicazione: <br> <code class="inline">/</code> e <code class="inline">/about</code></h3>
+        <h3>Spostare <code class="inline">listCtrl</code> in un template</h3>
+        <h3>Creare un controller per la pagina <code class="inline">about</code></h3>
+        <h3>
+          Documentation
+          <a href="http://goo.gl/DGi6tc" target="_blank">https://docs.angularjs.org/api/ngRoute</a>
+        </h3>
+      </slide>
+
+      <slide steps="1">
+        <h1>Do not reinvent the wheel!</h1>
+        <div step="1" style="margin-top: 200px;">
+          <h2>Import an open source module</h2>
+        </div>
+      </slide>
+
+      <slide bg-img="route2.png" steps="1">
+        <div step="1">
+          <h3 style="margin-top: 560px">
+            <a href="http://angular-google-maps.org/" target="_blank">angular-google-maps.org</a>
+          </h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Exercise</h2>
+        <h3 style="margin-top: 150px;">Insert a map in the about view</h3>
+        <h3>Create a marker that points to Login</h3>
+        <h4>Latitude: 45.506639, Logngitude: 9.228062</h4>
+      </slide>
+
+      <slide>
+        <h1 style="width: 80%" class="abs-center">Practical Advice for the real world</h1>
+      </slide>
+
+      <slide steps="3">
+        <h2>Appiclation Structure</h2>
+        <h3 style="margin-bottom: 0px">Small to medium apps</h3>
+        <div class="col half">
+          <code prism class="language-markup">
+  ├── app
+  │    ├── bower_components
+  │   ├── images
+  │   ├── scripts
+  │   │   ├── controllers
+  │   │   ├── directives
+  │   │   ├── services
+  │   │   └── app.js
+  │   ├── styles
+  │   ├── views
+  │   └── index.html
+  ├── node_modules
+  └── test
+          </code>
+        </div>
+        <div class="col half">
+          <div step="1">
+            <h4 style="margin-top: 100px">github.com/yeoman/generator-angular</h4>
+          </div>
+          <div class="col half" step="2">
+            <img src="assets/theme/images/yeoman.png" height="210" width="158" alt="">
+          </div>
+          <div class="col half" step="3">
+            <img src="assets/theme/images/grunt.png" height="210" width="144" alt="">
+          </div>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>Appiclation Structure</h2>
+        <h3 style="margin-bottom: 0px; margin-top: 10px">Medium to large apps</h3>
+        <div class="col half">
+          <code prism class="language-markup">
+  ├── bower_components
+  ├── docs
+  ├── e2e
+  ├── gulp
+  ├── node_modules
+  └── src
+      ├── app
+      │   ├── modules
+      │   │   └── myModule
+      │   │       ├── directives
+      │   │       ├── service
+      │   │       ├── views
+      │   │       └── myModule.js
+      │   └── main.js
+      └── index.html 
+  
+          </code>
+        </div>
+        <div class="col half">
+          <div step="1">
+            <h4 style="margin-top: 120px">github.com/Swiip/generator-gulp-angular</h4>
+          </div>
+          <div class="col half" step="2">
+            <img src="assets/theme/images/yeoman.png" height="210" width="158" alt="">
+          </div>
+          <div class="col half" step="3">
+            <img src="assets/theme/images/gulp.png" height="210" width="144" alt="">
+          </div>
+        </div>
+      </slide>
+
+      <slide>
+        <h1 style="width: 80%">
+          <h1 class="abs-center">Automate as much as possible</h1>
+        </h1>
+      </slide>
+
+      <slide steps="5">
+        <h2>During development</h2>
+        <div step="1">
+          <h3>Watch Files</h3>
+        </div>
+        <div step="2">
+          <h3>Live Reload</h3>
+        </div>
+        <div step="3">
+          <h3>Compile SASS</h3>
+        </div>
+        <div step="4">
+          <h3>Transpile ES6</h3>
+        </div>
+        <div step="5">
+          <h3>Lint Code</h3>
+        </div>
+      </slide>
+
+      <slide steps="6">
+        <h2>Automate the Build process</h2>
+        <div step="1">
+          <h3>Autoprefix Css</h3>
+        </div>
+        <div step="2">
+          <h3>Concat & Minify Css</h3>
+        </div>
+        <div step="3">
+          <h3>Concat & Minify Js</h3>
+        </div>
+        <div step="4">
+          <h3>Minify Html</h3>
+        </div>
+        <div step="5">
+          <h3>Run automatic test</h3>
+        </div>
+        <div step="6">
+          <h3><i>Deploy</i></h3>
+        </div>
+      </slide>
+
+      <slide>
+        <h2>Continue to study</h2>
+        <div>
+          <h3>https://scotch.io/</h3>
+        </div>
+        <div>
+          <h3>https://egghead.io/</h3>
+        </div>
+        <div>
+          <h3>http://code.tutsplus.com/categories/angularjs</h3>
+        </div>
+      </slide>
+
+      <slide steps="3">
+        <h2>Use open source modules</h2>
+        <div step="1">
+          <div class="col half text-center">
+            <img style="margin-top: 100px;" src="assets/theme/images/github_star.png" height="49" width="381" alt="">
+          </div>
+          <div class="col half text-center">
+            <img src="assets/theme/images/npm_stat.png" height="243" width="365" alt="">
+          </div>
+        </div>
+        <div step="2">
+          <h3 style="margin-top: 290px;">If possible, contribute!</h3>
+        </div>
+        <div step="3">
+          <h2>Don't be shy! <br>Ask Questions!</h2>
+        </div>
+      </slide>
+
+      <slide>
+        <h1 class="abs-center">Thanks</h1>
+        <div style="margin-top: 520px">
+          <h4>Let's keep in touch:</h4>
+          <div class="col half text-center">
+            @_teone
+          </div>
+          <div class="col half text-center">
+            @lambrojos
+          </div>
+        </div>
       </slide>
       <!-- =========== /SLIDE =========== -->
 

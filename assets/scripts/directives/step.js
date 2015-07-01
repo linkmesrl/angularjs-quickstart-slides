@@ -1,12 +1,16 @@
 'use strict';
 
-applause.directive('step', function(Appdata) {
+applause.directive('step', function(Appdata, $location) {
 
   var linkFn = function(scope, elem, attr) {
+
+    if($location.search().pdf === true){
+      scope.isPreview = true;
+    }
+
     scope.thisStep = attr.step;
      if(Appdata.data.isPreviewMode) {
       scope.isPreview = true;
-      console.log(scope.isPreview);
      }
   };
 

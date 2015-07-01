@@ -15,6 +15,15 @@ Slides for the workshop @ Login
 - $http
 - _Optional $resource_
 
+## Lesson 3:
+- Dependency Injection
+- Services
+
+## Lesson 4:
+- ngRoute
+- Using External Modules
+- Practical Advices
+
 ## To view the slide
 
 - `npm install`

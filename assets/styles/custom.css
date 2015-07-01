@@ -34,6 +34,8 @@ img.round {
 
 .col {
   float: left; }
+  .col img {
+    max-width: 100%; }
   .col.half {
     width: 45%; }
   .col.half + .col.half {
