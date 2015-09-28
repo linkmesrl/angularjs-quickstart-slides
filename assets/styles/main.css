@@ -417,7 +417,8 @@ table {
   height: 640px;
   width: 1024px;
   padding: 30px;
-  transition: all .6s ease; }
+  -webkit-transition: all .6s ease;
+          transition: all .6s ease; }
   .slide.preview {
     left: 100%;
     top: 40px; }
@@ -457,7 +458,8 @@ table {
   #go-to.ng-hide {
     top: -100px; }
   #go-to.ng-hide-remove, #go-to.ng-hide-add {
-    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+            transition: all .4s ease;
     display: block !important; }
   #go-to input {
     width: 128px;
@@ -473,7 +475,8 @@ table {
   left: 0;
   bottom: 0;
   height: 8px;
-  transition: width .5s ease; }
+  -webkit-transition: width .5s ease;
+          transition: width .5s ease; }
 
 #slide-count {
   position: absolute;
@@ -512,6 +515,7 @@ table {
       color: #fff;
       box-shadow: 1px 1px 1px #555;
       background-color: #333;
+      background: -webkit-linear-gradient(top, #333 0%, #444 50%, #333 51%, #222 100%);
       background: linear-gradient(to bottom, #333 0%, #444 50%, #333 51%, #222 100%); }
       .flip .clock > span:after {
         content: '';
