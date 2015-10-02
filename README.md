@@ -2,7 +2,7 @@
 
 Slides for the workshop @ Login
 
-View them here: [linkmesrl.github.io/angularjs-quickstart-slides](linkmesrl.github.io/angularjs-quickstart-slides)
+View them here: [http://linkmesrl.github.io/angularjs-quickstart-slides](http://linkmesrl.github.io/angularjs-quickstart-slides)
 
 ## Lesson 1:
 
