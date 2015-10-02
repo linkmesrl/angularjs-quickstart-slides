@@ -2,6 +2,8 @@
 
 Slides for the workshop @ Login
 
+View them here: linkmesrl.github.io/angularjs-quickstart-slides
+
 ## Lesson 1:
 
 - Introduction to Angular
